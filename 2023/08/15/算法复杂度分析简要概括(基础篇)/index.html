@@ -462,7 +462,7 @@
 <hr>
 <blockquote>
 <p>A1：我认为时间复杂度的理解应该是基于过程而言的，而不是基于结果的。基于结果，整个n肯定是一个有结果的值，我们可以看作它是一个基于常数时间复杂度的算法。但是当我们谈论时间复杂度时，我们通常会假设 n 是一个变量，它可以取任意值。这样我们就可以分析算法的运行时间随着输入数据规模的增长而增长的速度。</p>
-<p>回到上面的问题，f(n)=2n+2,我们说n=100的时候，我们从结果的角度看，的确它可以叫做O(1)的时间复杂度，但是n是可以变化的，n可以是1，2，3……10000等等。也就是说我们是不只研究单单n=100这一个例子。我们研究的是一整个关于f(n)函数的增长变化情况的全局，本题的例子中这个f(n)的变化明显是类似于线性的变化，于是我们根据化简原则，可以得出时间复杂度是O(n),而不是O(1)<br><img src="http://tva1.sinaimg.cn/large/005AypIPgy1hgyd49pz31j32bc1dsx0c.jpg" alt="img"></p>
+<p>回到上面的问题，f(n)=2n+2,我们说n=100的时候，我们从结果的角度看，的确它可以叫做O(1)的时间复杂度，但是n是可以变化的，n可以是1，2，3……10000等等。也就是说我们是不只研究单单n=100这一个例子。我们研究的是一整个关于f(n)函数的增长变化情况的全局，本题的例子中这个f(n)的变化明显是类似于线性的变化，于是我们根据化简原则，可以得出时间复杂度是O(n),而不是O(1)<br><img src="https://img1.imgtp.com/2023/08/16/2LRqrNWv.png" alt="img"></p>
 </blockquote>
 <h3><span id="zong-jie">总结</span><a href="#zong-jie" class="header-anchor">#</a></h3><blockquote>
 <p><strong>算法的复杂度是基于过程的而非单一的结果,根据循环的规律去写出次数对应的函数是关键，因为我们研究的是函数的变化速率的方向。最后，根据化简原则，我们将函数化简之后得到的表达式就是我们需要的时间复杂度O()</strong><script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.2.7/raphael.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/flowchart/1.6.5/flowchart.min.js"></script><textarea id="flowchart-0-code" style="display: none">st=&gt;start: 列出各行代码的执行次数
