@@ -450,7 +450,7 @@
 <li><strong>树的前序遍历</strong></li>
 <li><strong>递归</strong></li>
 </ul>
-<h3><span id="zhi-shi-dian-fu-xi">知识点复习</span><a href="#zhi-shi-dian-fu-xi" class="header-anchor">#</a></h3><h4><span id="shu-de-qian-xu-bian-li"><strong>树的前序遍历</strong>：</span><a href="#shu-de-qian-xu-bian-li" class="header-anchor">#</a></h4><h5><span id="kuai-su-gai-shu">快速概述</span><a href="#kuai-su-gai-shu" class="header-anchor">#</a></h5><blockquote>
+<h3><span id="zhi-shi-dian-fu-xi">知识点复习</span><a href="#zhi-shi-dian-fu-xi" class="header-anchor">#</a></h3><h3><span id="shu-de-qian-xu-bian-li"><strong>树的前序遍历</strong>：</span><a href="#shu-de-qian-xu-bian-li" class="header-anchor">#</a></h3><h4><span id="kuai-su-gai-shu">快速概述</span><a href="#kuai-su-gai-shu" class="header-anchor">#</a></h4><blockquote>
 <p>假如我们有如图所示的数据：<br><img src="https://img1.imgtp.com/2023/08/17/NWR3sFPX.jpg" alt="img"><br><strong>前置规定</strong>：我们规定把A作为根结点，且优先遍历左结点，直到左结点没有为止，然后再去走右结点，左右结点都遍历过了之后再回传到上一个父结点<br><strong>正式操作</strong>：我们从A结点开始出发，发现B和E结点两条路可以走，因为我们前置规定优先遍历左结点，所以走B结点，走到B结点发现左边没有结点可以走了，然后我们开始走B结点的右结点C，C结点之后按照同样的规定，我们依次遍历F、D 。走完D之后我们发现左右都没路了，我们开始回传到C结点、同样的F、D对结点于C来说是它的左右子结点， 我们已经遍历过了，于是C结点回传给B结点，同理B结点回传给A结点。对于A来说E结点还没遍历过，于是开始遍历E结点。E结点遍历之后按照同样的规则回传给A结点。至此，程序结束。</p>
 </blockquote>
 <hr>
@@ -473,7 +473,7 @@ Void PreOrderTraverse(结点T)
     PreOrderTraverse(T->RightNode);//进入结点右边的子节点
 }
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h5><span id="zong-jie">总结</span><a href="#zong-jie" class="header-anchor">#</a></h5><blockquote>
+<h4><span id="zong-jie">总结</span><a href="#zong-jie" class="header-anchor">#</a></h4><blockquote>
 <p>核心语句:</p>
 </blockquote>
 <pre class="line-numbers language-c++"><code class="language-c++">    print("%c",T->data);//打印当前结点的名字
@@ -495,7 +495,7 @@ Void PreOrderTraverse(结点T)
 </blockquote>
 </blockquote>
 </blockquote>
-<h5><span id="kuai-su-gai-shu">快速概述</span><a href="#kuai-su-gai-shu" class="header-anchor">#</a></h5><blockquote>
+<h4><span id="kuai-su-gai-shu">快速概述</span><a href="#kuai-su-gai-shu" class="header-anchor">#</a></h4><blockquote>
 <p>假如我们有如下的数据<br><img src="https://img1.imgtp.com/2023/08/17/v5n6Efb3.jpg" alt="img"><br><strong>前置规定</strong>：我们可以随机选择一个结点作为根结点，且优先遍历左结点，（<strong>同时每走一个结点，我们用变量 visit 标记一下，表明我们走过这个结点了。</strong>）</p>
 <blockquote>
 <p><strong>回退结点的规则</strong>：<strong>若结点被visit标记了或者左右结点都不存在</strong></p>
@@ -509,7 +509,7 @@ Void PreOrderTraverse(结点T)
 <p><strong>看到这里，有没有发现DFS深度优先遍历算法其实就是前序遍历算法的变式呀，只不过DFS深度遍历算法增加了变量visit用来标记已经变量过的结点，以此来提早退回遍历过的结点。</strong></p>
 </blockquote>
 </blockquote>
-<h5><span id="dai-ma-shi-xian">代码实现</span><a href="#dai-ma-shi-xian" class="header-anchor">#</a></h5><pre class="line-numbers language-c++"><code class="language-c++">struct Tree
+<h4><span id="dai-ma-shi-xian">代码实现</span><a href="#dai-ma-shi-xian" class="header-anchor">#</a></h4><pre class="line-numbers language-c++"><code class="language-c++">struct Tree
 {  char data[2];//存储结点的名字
    int vist=0;//规定visit=0还没有被遍历，visit=1，则已经被遍历
     struct Tree *LeftNode;//存储结点左边的子节点
@@ -538,7 +538,7 @@ Void PreOrderTraverse(结点T)
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 <hr>
 <blockquote>
-<p>此时我们从A回退到E结点来执行E结点的剩余代码：<br>** PreOrderTraverse(T-&gt;RightNode);//进入结点右边的子节点**<br><strong>因为是回退结点，而不是对该结点的重头开始执行，   PreOrderTraverse(T-&gt;LeftNode);已经执行完毕，所以我们只要执行它的下一行PreOrderTraverse(T-&gt;RightNode);即可。</strong></p>
+<p>此时我们从A回退到E结点来执行E结点的剩余代码：<br><strong>PreOrderTraverse(T-&gt;RightNode);//进入结点右边的子节点</strong><br><strong>因为是回退结点，而不是对该结点的重头开始执行，所以从A结点回退到E结点的时候，对于E结点来说：   PreOrderTraverse(T-&gt;LeftNode);已经执行完毕，所以我们只要执行它的下一行PreOrderTraverse(T-&gt;RightNode);即可。</strong></p>
 </blockquote>
 <hr>
 <h2><span id="ti-mu-jiang-jie">题目讲解</span><a href="#ti-mu-jiang-jie" class="header-anchor">#</a></h2><blockquote>
