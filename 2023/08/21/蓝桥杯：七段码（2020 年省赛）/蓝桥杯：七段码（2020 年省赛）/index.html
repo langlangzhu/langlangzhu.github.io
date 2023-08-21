@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="图的简单理解, 浪浪猪">
+    <meta name="keywords" content="浪浪猪">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>图的简单理解 | 浪浪猪</title>
+    <title>浪浪猪</title>
     <link rel="icon" type="image/png" href="/favicon1.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -250,12 +250,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/8.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/0.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">图的简单理解</h1>
+                    <h1 class="description center-align post-title"></h1>
                 </div>
             </div>
         </div>
@@ -369,13 +369,9 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                    <div class="article-tag">
-                        
-                            <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">
-                                <span class="chip bg-color">数据结构</span>
-                            </a>
-                        
-                    </div>
+                          <div class="article-tag">
+                            <span class="chip bg-color">无标签</span>
+                          </div>
                     
                 </div>
                 <div class="col s5 right-align">
@@ -387,7 +383,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2023-08-20
+                    2023-08-21
                 </div>
                 
 
@@ -401,14 +397,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    922
+                    1.4k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    4 分
+                    5 分
                 </div>
                 
 
@@ -428,163 +424,66 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2><span id="tu">图</span><a href="#tu" class="header-anchor">#</a></h2><h3><span id="li-yong-shu-zu-gou-jian-tu">利用数组构建图</span><a href="#li-yong-shu-zu-gou-jian-tu" class="header-anchor">#</a></h3><h4><span id="wu-xiang-tu"><strong>无向图</strong></span><a href="#wu-xiang-tu" class="header-anchor">#</a></h4><pre class="line-numbers language-xml"><code class="language-xml">#include &lt;bits/stdc++.h>
-using  namespace  std;
-typedef char VertexType;
-typedef int EdgeType;
-#define MAXVER 100
-#define INFINITY 65532
-typedef struct
-{
-    VertexType vexs[MAXVER];
-    EdgeType arc[MAXVER][MAXVER];
-    int numNodes,numEdges;
-}MGraph;
-void CreatMGraph(MGraph *G)
-{
-    int i,j,k,w;
-    cout&lt;&lt;"输入顶点数和边数:"&lt;<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>endl;</span>
-    <span class="token attr-name">cin</span><span class="token punctuation">></span></span>>G->numNodes>>G->numEdges;  //录入顶点和边数量的信息
-    cout&lt;&lt;"请输入顶点的具体的值"&lt;<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>endl;</span>
-    <span class="token attr-name">for(i</span><span class="token attr-value"><span class="token punctuation">=</span>0;i&lt;G-</span><span class="token punctuation">></span></span>numNodes;i++)
-    {  cin>>G->vexs[i];
-    }
-    for(i=0;i<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>G-</span><span class="token punctuation">></span></span>numNodes;i++)
-    {  for(j=1;j<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>G-</span><span class="token punctuation">></span></span>numNodes;j++)
+                <h1><span id="lan-qiao-bei-qi-duan-ma-2020-nian-sheng-sai">蓝桥杯：七段码（2020 年省赛）</span><a href="#lan-qiao-bei-qi-duan-ma-2020-nian-sheng-sai" class="header-anchor">#</a></h1><p>小蓝要用七段码数码管来表示一种特殊的文字。</p>
+<p><img src="https://img1.imgtp.com/2023/08/21/6lAHTPLZ.jpg"></p>
+<p> 七段码上图给出了七段码数码管的一个图示，数码管中一共有7 段可以发光的二极管，<br> 分别标记为a, b, c, d, e, f, g。小蓝要选择一部分二极管（至少要有一个）发光来表达字符。<br> 在设计字符的表达时，要求所有发光的二极管是连成一片的。<br>例如：b 发光，其他二极管不发光可以用来表达一种字符。<br>例如：c 发光，其他二极管不发光可以用来表达一种字符。这种方案与上一行的方案可以用来表示不同的字符，尽管看上去比较相似。<br>例如：a, b, c, d, e 发光，f, g 不发光可以用来表达一种字符。<br>例如：b, f 发光，其他二极管不发光则不能用来表达一种字符，因为发光的二极管没有连成一片。<br>请问，小蓝可以用七段码数码管表达多少种不同的字符？</p>
+<h2><span id="wen-ti-fen-xi">问题分析</span><a href="#wen-ti-fen-xi" class="header-anchor">#</a></h2><h3><span id="wen-ti-jian-hua">问题简化</span><a href="#wen-ti-jian-hua" class="header-anchor">#</a></h3><blockquote>
+<p><strong>根据题意所述，它需要我们求出能二极管能表达出的字符种类有多少个。那我们很容易就能想到这道题完全可以转换成求点到任意点的路径数量有多少的题目。但是由于a-&gt;b显示的图形和b-&gt;a显示出来的其实是一样的，所以最后的答案应该是路径的总数量/2</strong></p>
+</blockquote>
+<h3><span id="jie-jue-wen-ti">解决问题</span><a href="#jie-jue-wen-ti" class="header-anchor">#</a></h3><h4><span id="wen-ti-ti-chu">问题提出</span><a href="#wen-ti-ti-chu" class="header-anchor">#</a></h4><blockquote>
+<p><strong>既然是搜索路径的题目，我们很容易就可以想到dfs深度优先遍历搜索算法，也就是选择任意一个点作为起始点，访问过的结点我们全部标记为True，随后不断进入子结点，直到碰到退出条件。dfs算法会对每个访问过的路径进行标记，标记过的结点则无法再次访问，这就导致了如果一个点到另外一个结点有两条路，dfs就只能优先遍历程序设置的那条路，另外一条路则不会被计算在内（如下演示图）</strong></p>
+</blockquote>
+<p><strong>正常的dfs遍历:</strong><br><img src="https://img1.imgtp.com/2023/08/21/DdRZJJeg.gif" alt="dfs"><br><strong>本题需要的遍历:</strong><br><img src="https://img1.imgtp.com/2023/08/21/bVTN4XtD.gif" alt="遍历"></p>
+<h4><span id="jie-jue-fang-an">解决方案</span><a href="#jie-jue-fang-an" class="header-anchor">#</a></h4><blockquote>
+<p>如上两个演示图，我们可以看到问题所在是dfs遇到返回条件返回的时候，遍历过的结点依旧被标记，这就导致了从B-&gt;D-E的路线，dfs其实是无法实现计算在内的。既然是标记结点的问题，那我们只要每一次遇到返回条件返回结点的时候把已经返回了的结点标记重置为False（未访问状态）不就可以完美解决本题了嘛，这就是基于DFS改编的<strong>回溯算法</strong>的雏形</p>
+</blockquote>
+<h3><span id="si-lu">思路</span><a href="#si-lu" class="header-anchor">#</a></h3><div id="flowchart-0" class="flow-chart"></div>
+## 核心代码讲解
+``` xml
+void Backtracking(int i, int visit[], int *count) {
+    for (int j = 0; j &lt; 7; j++) /*依次从a（0），b（1），c（2），d(3)，e(4)，f(5)，g(6)这七个二极管分别作为出发点进行遍历*/
+    {
+        if (graph[i][j] == 1 &amp;&amp; visit[j] == 0) //如果两个结点之间有连接且要访问的那个结点没有被访问过则满足条件
         {
-           G->arc[i][j]=INFINITY;
-        }
-      }
-    for(k=0;k<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>G-</span><span class="token punctuation">></span></span>numNodes;k++)
-    {  cout&lt;&lt;"输入边(vi,vj)的下标i，j，以及权重w"&lt;<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>endl;</span>
-        <span class="token attr-name">cin</span><span class="token punctuation">></span></span>>i>>j>>w;
-        G->arc[i][j]=w;//输入权重值
-        G->arc[j][i]=w;
-    }//无向图的矩阵对称
-
+            visit[j]=1;//提前标记我们要进入的那个结点已经被我们访问了
+            dfs(j, visit, count);//进入新结点，从新结点的基础上继续搜索路径
+            ( *count)++;//回退的时候进行计数
+            visit[j] = 0;//将已经回退的那个结点访问标记重置为0
+                            }
+                                    }
+}
+```
+&gt; **这里有一个细节要注意：我们的count初始化进来是值是1，因为如果结点走到无路可走，程序其实是从if判断语句那里直接退出的，也就是说当前的路径没有被计数进去，所以我们要在初始化count的时候就让它天然的就是以1为起步。**
+``` xml
+#include <iostream>
+using namespace std;
+int graph[7][7] = {//如果两个相邻的结点有连接，则标记为1，例如：(0,1)，0-&gt;1有连接，那么我们的graph[0][1]=1，同时1-&gt;0也是有连接的，那我们的graph[1][0]=1
+        {1, 1, 0, 0, 0, 1, 0},
+        {1, 1, 1, 0, 0, 0, 1},
+        {0, 1, 1, 1, 0, 0, 1},
+        {0, 0, 1, 1, 1, 0, 0},
+        {0, 0, 0, 1, 1, 1, 1},
+        {1, 0, 0, 0, 1, 1, 1},
+        {0, 1, 1, 0, 1, 1, 1}
+};
+void Backtracking(int i, int visit[], int *count) {
+    for (int j = 0; j &lt; 7; j++) {
+        if (graph[i][j] == 1 &amp;&amp; visit[j] == 0) {
+            visit[j]=1;
+            dfs(j, visit, count);
+            ( *count)++;
+            visit[j] = 0;
+                            }
+                                    }
 }
 
-int main()
-{    MGraph G1;//创建一个空的G1无向图变量
-     CreatMGraph(&amp;G1);//调用函数初始化G1
-}
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h3><span id="li-yong-lian-biao-lai-gou-zao-tu">利用链表来构造图</span><a href="#li-yong-lian-biao-lai-gou-zao-tu" class="header-anchor">#</a></h3><h4><span id="wu-xiang-tu"><strong>无向图</strong></span><a href="#wu-xiang-tu" class="header-anchor">#</a></h4><pre class="line-numbers language-xml"><code class="language-xml">#include &lt;bits/stdc++.h>
-using  namespace  std;
-typedef char VertexType;
-typedef int EdgeType;
-#define MAXVEX 100
-#define INFINITY 65532
-typedef struct EdgeNode
-{ int adjvex;存储当前结点的位置
-    EdgeType weight;存储权值
-    struct EdgeNode *Next; 存储下一个指向的结点
-}EdgeNode; 
-//构造出边表结点
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<blockquote>
-<p>代码具象化：<br><img src="https://img1.imgtp.com/2023/08/20/PblUz2Ru.jpg" alt="构造出边表结点图"></p>
-</blockquote>
-<pre class="line-numbers language-xml"><code class="language-xml">typedef struct VertexNode
-{
-    VertexType data;//存储顶点的数值
-    EdgeNode *firstedge;//存储顶点指向的下一个结点
-}VertexNode,AdjList[MAXVEX];//构造出顶点列表
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<blockquote>
-<p>代码具象化：<br><img src="https://img1.imgtp.com/2023/08/20/oNvo9jJN.jpg" alt="构造出顶点列表图"></p>
-</blockquote>
-<pre class="line-numbers language-xml"><code class="language-xml">typedef struct
-{
-    AdjList adjList;
-    int numNodes,numEdges;
-}GraphAdjlist;
-void CreatMGraph(GraphAdjlist *G)
-{
-    int i,j,k,w;
-    EdgeNode *e;//定义一个边表
-    cout&lt;&lt;"输入顶点数和边数:"&lt;<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>endl;</span>
-    <span class="token attr-name">cin</span><span class="token punctuation">></span></span>>G->numNodes>>G->numEdges;
-    for (int i=0; i<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>G-</span><span class="token punctuation">></span></span>numNodes ; ++i) {
-      cin>>G->adjList[i].data;//初始化顶点表的data数值
-      G->adjList[i].firstedge=NULL;//初始化顶点表的firstedge的数值
-    }
-    for(k=0;k<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>G-</span><span class="token punctuation">></span></span>numEdges;k++)//
-    {
-        cout&lt;<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>"输入边（vi，vj）上的顶点序号";</span>
-        <span class="token attr-name">cin</span><span class="token punctuation">></span></span>>i>>j;
-        e=(EdgeNode *)malloc(sizeof(EdgeNode));//申请边表类型的一个临时内存
-        e->adjvex=j;//把j输入到边表结点的adjvex上，表达当前j的位置
-        e->Next=G->adjList[i].firstedge;//采用头插法将位置为j的边表结点插入到头节点i对应的下一个结点。
-         G->adjList[i].firstedge=e;
-        
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<blockquote>
-<p>代码具象化：<br><img src="https://img1.imgtp.com/2023/08/20/XTAqW8FZ.jpg" alt="头插法"></p>
-</blockquote>
-<p><strong>因为是无向图，所以正反两面都要配置，上面是i-&gt;j的配置,下面的代码是j-&gt;i的配置</strong></p>
-<pre class="line-numbers language-xml"><code class="language-xml">        e=(EdgeNode *)malloc(sizeof(EdgeNode));
-        e->adjvex=i;
-        e->Next=G->adjList[j].firstedge;
-        G->adjList[j].firstedge=e;
-            }
-        free(e);//释放申请malloc的动态内存
-}
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h5><span id="wan-zheng-dai-ma">完整代码</span><a href="#wan-zheng-dai-ma" class="header-anchor">#</a></h5><pre class="line-numbers language-xml"><code class="language-xml">#include &lt;bits/stdc++.h>
-using  namespace  std;
-typedef char VertexType;
-typedef int EdgeType;
-#define MAXVEX 100
-#define INFINITY 65532
-typedef struct EdgeNode
-{ int adjvex;存储当前结点的位置
-    EdgeType weight;存储权值
-    struct EdgeNode *Next; 存储下一个指向的结点
-}EdgeNode; 
-//构造出边表结点
-typedef struct VertexNode
-{
-    VertexType data;//存储顶点的数值
-    EdgeNode *firstedge;//存储顶点指向的下一个结点
-}VertexNode,AdjList[MAXVEX];//构造出顶点列表
-typedef struct
-{
-    AdjList adjList;
-    int numNodes,numEdges;
-}GraphAdjlist;
-void CreatMGraph(GraphAdjlist *G)
-{
-    int i,j,k,w;
-    EdgeNode *e;//定义一个边表
-    cout&lt;&lt;"输入顶点数和边数:"&lt;<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>endl;</span>
-    <span class="token attr-name">cin</span><span class="token punctuation">></span></span>>G->numNodes>>G->numEdges;
-    for (int i=0; i<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>G-</span><span class="token punctuation">></span></span>numNodes ; ++i) {
-      cin>>G->adjList[i].data;//初始化顶点表的data数值
-      G->adjList[i].firstedge=NULL;//初始化顶点表的firstedge的数值
-    }
-    for(k=0;k<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>G-</span><span class="token punctuation">></span></span>numEdges;k++)//
-    {
-        cout&lt;<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>"输入边（vi，vj）上的顶点序号";</span>
-        <span class="token attr-name">cin</span><span class="token punctuation">></span></span>>i>>j;
-        e=(EdgeNode *)malloc(sizeof(EdgeNode));//申请边表类型的一个临时内存
-        e->adjvex=j;//把j输入到边表结点的adjvex上，表达当前j的位置
-        e->Next=G->adjList[i].firstedge;//采用头插法将位置为j的边表结点插入到头节点i对应的下一个结点。
-          G->adjList[i].firstedge=e;
-        e=(EdgeNode *)malloc(sizeof(EdgeNode));
-        e->adjvex=i;
-        e->Next=G->adjList[j].firstedge;
-        G->adjList[j].firstedge=e;
-             }
-        free(e);//释放申请malloc的动态内存
-}
-
-int main()
-{GraphAdjlist *G1;
- CreatMGraph(G1);
-}
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
+<p>int main() {<br>    int count = 1;//将count变量用来计数<br>    int visit[7] = {0};//初始化访问标记数组<br>    Backtracking(0, visit, &amp;count);//调用回溯函数<br>    cout &lt;&lt; count / 2 &lt;&lt; endl;//输出种类数<br>    return 0;<br>}<br>```<script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.2.7/raphael.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/flowchart/1.6.5/flowchart.min.js"></script><textarea id="flowchart-0-code" style="display: none">st=&gt;start: 创建一个7×7的数组，用来存储结点的连接情况
+op=&gt;operation: 自定义函数Backtracking用来遍历结点
+op1=&gt;operation: 在Backtracking函数中改编DFS算法使之成为回溯算法，且符合条件后每次回退都进行路径数量的计数
+op2=&gt;operation: 因为我们要求的是路径所显示的图形，比如从a-&gt;b显示的图形和b-&gt;a显示出来的其实是一样的，所以最后我们要求的图形种类应该是总路径/2
+end=&gt;end: 输出总路径/2
+st-&gt;op-&gt;op1-&gt;op2-&gt;end</textarea><textarea id="flowchart-0-options" style="display: none">{"theme":"simple","scale":1,"line-width":2,"line-length":50,"text-margin":10,"font-size":12}</textarea><script>  var code = document.getElementById("flowchart-0-code").value;  var options = JSON.parse(decodeURIComponent(document.getElementById("flowchart-0-options").value));  var diagram = flowchart.parse(code);  diagram.drawSVG("flowchart-0", options);</script></p>
+</iostream>
                 
             </div>
             <hr/>
@@ -610,7 +509,7 @@ int main()
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://langlangzhu.top/2023/08/20/%E5%9B%BE%E7%9A%84%E7%AE%80%E5%8D%95%E7%90%86%E8%A7%A3/">http://langlangzhu.top/2023/08/20/%E5%9B%BE%E7%9A%84%E7%AE%80%E5%8D%95%E7%90%86%E8%A7%A3/</a>
+                    <a href="http://langlangzhu.top/2023/08/21/%E8%93%9D%E6%A1%A5%E6%9D%AF%EF%BC%9A%E4%B8%83%E6%AE%B5%E7%A0%81%EF%BC%882020%20%E5%B9%B4%E7%9C%81%E8%B5%9B%EF%BC%89/%E8%93%9D%E6%A1%A5%E6%9D%AF%EF%BC%9A%E4%B8%83%E6%AE%B5%E7%A0%81%EF%BC%882020%20%E5%B9%B4%E7%9C%81%E8%B5%9B%EF%BC%89/">http://langlangzhu.top/2023/08/21/%E8%93%9D%E6%A1%A5%E6%9D%AF%EF%BC%9A%E4%B8%83%E6%AE%B5%E7%A0%81%EF%BC%882020%20%E5%B9%B4%E7%9C%81%E8%B5%9B%EF%BC%89/%E8%93%9D%E6%A1%A5%E6%9D%AF%EF%BC%9A%E4%B8%83%E6%AE%B5%E7%A0%81%EF%BC%882020%20%E5%B9%B4%E7%9C%81%E8%B5%9B%EF%BC%89/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -647,11 +546,7 @@ int main()
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            
-                                <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">
-                                    <span class="chip bg-color">数据结构</span>
-                                </a>
-                            
+                            <span class="chip bg-color">无标签</span>
                         </div>
                     
                 </div>
@@ -819,9 +714,48 @@ int main()
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
+            <div class="card">
+                <a href="/2023/08/21/%E8%93%9D%E6%A1%A5%E6%9D%AF%EF%BC%9A%E4%B8%83%E6%AE%B5%E7%A0%81%EF%BC%882020%20%E5%B9%B4%E7%9C%81%E8%B5%9B%EF%BC%89/%E8%93%9D%E6%A1%A5%E6%9D%AF%EF%BC%9A%E4%B8%83%E6%AE%B5%E7%A0%81%EF%BC%882020%20%E5%B9%B4%E7%9C%81%E8%B5%9B%EF%BC%89/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="">
+                        
+                        <span class="card-title"></span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-08-21
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            浪浪猪
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
             <div class="card">
                 <a href="/2023/08/21/%E8%93%9D%E6%A1%A5%E6%9D%AF%EF%BC%9A%E4%B8%83%E6%AE%B5%E7%A0%81%EF%BC%882020-%E5%B9%B4%E7%9C%81%E8%B5%9B%EF%BC%89/">
                     <div class="card-image">
@@ -839,9 +773,9 @@ int main()
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2023-08-21
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-08-21
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -863,55 +797,6 @@ int main()
                     
                     <a href="/tags/%E5%9B%9E%E6%BA%AF%E7%AE%97%E6%B3%95/">
                         <span class="chip bg-color">回溯算法</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/2023/08/17/%E8%93%9D%E6%A1%A5%E6%9D%AF2017%E7%9C%81%E8%B5%9B%E5%A1%AB%E7%A9%BA%E9%A2%98%EF%BC%88%E8%BF%B7%E5%AE%AB%EF%BC%89/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="蓝桥杯2017年省赛填空题（统计出迷宫的人数）">
-                        
-                        <span class="card-title">蓝桥杯2017年省赛填空题（统计出迷宫的人数）</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2023-08-17
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-user fa-fw"></i>
-                            浪浪猪
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF/">
-                        <span class="chip bg-color">蓝桥杯</span>
-                    </a>
-                    
-                    <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">
-                        <span class="chip bg-color">数据结构</span>
                     </a>
                     
                 </div>
