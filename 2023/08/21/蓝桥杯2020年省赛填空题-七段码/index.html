@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="蓝桥杯：七段码（2020 年省赛）, 浪浪猪">
+    <meta name="keywords" content="蓝桥杯2020年省赛填空题(七段码), 浪浪猪">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>蓝桥杯：七段码（2020 年省赛） | 浪浪猪</title>
+    <title>蓝桥杯2020年省赛填空题(七段码) | 浪浪猪</title>
     <link rel="icon" type="image/png" href="/favicon1.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -250,12 +250,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/5.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/12.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">蓝桥杯：七段码（2020 年省赛）</h1>
+                    <h1 class="description center-align post-title">蓝桥杯2020年省赛填空题(七段码)</h1>
                 </div>
             </div>
         </div>
@@ -371,12 +371,12 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF/">
-                                <span class="chip bg-color">蓝桥杯</span>
-                            </a>
-                        
                             <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">
                                 <span class="chip bg-color">数据结构</span>
+                            </a>
+                        
+                            <a href="/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF/">
+                                <span class="chip bg-color">蓝桥杯</span>
                             </a>
                         
                             <a href="/tags/%E5%9B%9E%E6%BA%AF%E7%AE%97%E6%B3%95/">
@@ -409,14 +409,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.4k
+                    1.2k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    5 分
+                    4 分
                 </div>
                 
 
@@ -467,7 +467,7 @@
 <blockquote>
 <p><strong>这里有一个细节要注意：我们的count初始化进来是值是1，因为如果结点走到无路可走，程序其实是从if判断语句那里直接退出的，也就是说当前的路径没有被计数进去，所以我们要在初始化count的时候就让它天然的就是以1为起步。</strong></p>
 </blockquote>
-<h2><span id="yuan-dai-ma">源代码</span><a href="#yuan-dai-ma" class="header-anchor">#</a></h2><pre class="line-numbers language-xml"><code class="language-xml">#include <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>iostream</span><span class="token punctuation">></span></span>
+<pre class="line-numbers language-c++"><code class="language-c++">#include <iostream>
 using namespace std;
 int graph[7][7] = {//如果两个相邻的结点有连接，则标记为1，例如：(0,1)，0->1有连接，那么我们的graph[0][1]=1，同时1->0也是有连接的，那我们的graph[1][0]=1
         {1, 1, 0, 0, 0, 1, 0},
@@ -479,8 +479,8 @@ int graph[7][7] = {//如果两个相邻的结点有连接，则标记为1，例�
         {0, 1, 1, 0, 1, 1, 1}
 };
 void Backtracking(int i, int visit[], int *count) {
-    for (int j = 0; j &lt; 7; j++) {
-        if (graph[i][j] == 1 &amp;&amp; visit[j] == 0) {
+    for (int j = 0; j < 7; j++) {
+        if (graph[i][j] == 1 && visit[j] == 0) {
             visit[j]=1;
             dfs(j, visit, count);
             ( *count)++;
@@ -492,11 +492,11 @@ void Backtracking(int i, int visit[], int *count) {
 int main() {
     int count = 1;//将count变量用来计数
     int visit[7] = {0};//初始化访问标记数组
-    Backtracking(0, visit, &amp;count);//调用回溯函数
-    cout &lt;&lt; count / 2 &lt;&lt; endl;//输出种类数
+    Backtracking(0, visit, &count);//调用回溯函数
+    cout << count / 2 << endl;//输出种类数
     return 0;
 }
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></iostream></code></pre>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.2.7/raphael.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/flowchart/1.6.5/flowchart.min.js"></script><textarea id="flowchart-0-code" style="display: none">st=&gt;start: 创建一个7×7的数组，用来存储结点的连接情况
 op=&gt;operation: 自定义函数Backtracking用来遍历结点
 op1=&gt;operation: 在Backtracking函数中改编DFS算法使之成为回溯算法，且符合条件后每次回退都进行路径数量的计数
@@ -528,7 +528,7 @@ st-&gt;op-&gt;op1-&gt;op2-&gt;end</textarea><textarea id="flowchart-0-options" s
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://langlangzhu.top/2023/08/21/%E8%93%9D%E6%A1%A5%E6%9D%AF%EF%BC%9A%E4%B8%83%E6%AE%B5%E7%A0%81%EF%BC%882020-%E5%B9%B4%E7%9C%81%E8%B5%9B%EF%BC%89/">http://langlangzhu.top/2023/08/21/%E8%93%9D%E6%A1%A5%E6%9D%AF%EF%BC%9A%E4%B8%83%E6%AE%B5%E7%A0%81%EF%BC%882020-%E5%B9%B4%E7%9C%81%E8%B5%9B%EF%BC%89/</a>
+                    <a href="http://langlangzhu.top/2023/08/21/%E8%93%9D%E6%A1%A5%E6%9D%AF2020%E5%B9%B4%E7%9C%81%E8%B5%9B%E5%A1%AB%E7%A9%BA%E9%A2%98-%E4%B8%83%E6%AE%B5%E7%A0%81/">http://langlangzhu.top/2023/08/21/%E8%93%9D%E6%A1%A5%E6%9D%AF2020%E5%B9%B4%E7%9C%81%E8%B5%9B%E5%A1%AB%E7%A9%BA%E9%A2%98-%E4%B8%83%E6%AE%B5%E7%A0%81/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -566,12 +566,12 @@ st-&gt;op-&gt;op1-&gt;op2-&gt;end</textarea><textarea id="flowchart-0-options" s
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF/">
-                                    <span class="chip bg-color">蓝桥杯</span>
-                                </a>
-                            
                                 <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">
                                     <span class="chip bg-color">数据结构</span>
+                                </a>
+                            
+                                <a href="/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF/">
+                                    <span class="chip bg-color">蓝桥杯</span>
                                 </a>
                             
                                 <a href="/tags/%E5%9B%9E%E6%BA%AF%E7%AE%97%E6%B3%95/">
@@ -745,17 +745,18 @@ st-&gt;op-&gt;op1-&gt;op2-&gt;end</textarea><textarea id="flowchart-0-options" s
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2023/08/21/%E8%93%9D%E6%A1%A5%E6%9D%AF%EF%BC%9A%E4%B8%83%E6%AE%B5%E7%A0%81%EF%BC%882020%20%E5%B9%B4%E7%9C%81%E8%B5%9B%EF%BC%89/%E8%93%9D%E6%A1%A5%E6%9D%AF%EF%BC%9A%E4%B8%83%E6%AE%B5%E7%A0%81%EF%BC%882020%20%E5%B9%B4%E7%9C%81%E8%B5%9B%EF%BC%89/">
+                <a href="/2023/08/21/%E8%93%9D%E6%A1%A5%E6%9D%AF2020%E5%B9%B4%E7%9C%81%E8%B5%9B%E5%A1%AB%E7%A9%BA%E9%A2%98-%E4%B8%83%E6%AE%B5%E7%A0%81/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="">
+                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="蓝桥杯2020年省赛填空题(七段码)">
                         
-                        <span class="card-title"></span>
+                        <span class="card-title">蓝桥杯2020年省赛填空题(七段码)</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -765,9 +766,9 @@ st-&gt;op-&gt;op1-&gt;op2-&gt;end</textarea><textarea id="flowchart-0-options" s
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2023-08-21
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-08-21
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -775,6 +776,23 @@ st-&gt;op-&gt;op1-&gt;op2-&gt;end</textarea><textarea id="flowchart-0-options" s
                             
                         </span>
                     </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">
+                        <span class="chip bg-color">数据结构</span>
+                    </a>
+                    
+                    <a href="/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF/">
+                        <span class="chip bg-color">蓝桥杯</span>
+                    </a>
+                    
+                    <a href="/tags/%E5%9B%9E%E6%BA%AF%E7%AE%97%E6%B3%95/">
+                        <span class="chip bg-color">回溯算法</span>
+                    </a>
+                    
                 </div>
                 
             </div>
@@ -1042,7 +1060,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">7.8k</span>&nbsp;字
+                class="white-color">6.1k</span>&nbsp;字
             
             
             
