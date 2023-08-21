@@ -394,7 +394,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2023-08-20
+                    2023-08-21
                 </div>
                 
 
@@ -516,21 +516,21 @@ void CreatMGraph(GraphAdjlist *G)
         e=(EdgeNode *)malloc(sizeof(EdgeNode));//申请边表类型的一个临时内存
         e->adjvex=j;//把j输入到边表结点的adjvex上，表达当前j的位置
         e->Next=G->adjList[i].firstedge;//采用头插法将位置为j的边表结点插入到头节点i对应的下一个结点。
+         G->adjList[i].firstedge=e;
         
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <blockquote>
 <p>代码具象化：<br><img src="https://img1.imgtp.com/2023/08/20/XTAqW8FZ.jpg" alt="头插法"></p>
 </blockquote>
-<p>**因为是无向图，所以正反两面都要配置，上面是i-&gt;j的配置,下面的代码是j-&gt;i的配置 **</p>
-<pre class="line-numbers language-xml"><code class="language-xml">        G->adjList[i].firstedge=e;
-        e=(EdgeNode *)malloc(sizeof(EdgeNode));
+<p><strong>因为是无向图，所以正反两面都要配置，上面是i-&gt;j的配置,下面的代码是j-&gt;i的配置</strong></p>
+<pre class="line-numbers language-xml"><code class="language-xml">        e=(EdgeNode *)malloc(sizeof(EdgeNode));
         e->adjvex=i;
         e->Next=G->adjList[j].firstedge;
         G->adjList[j].firstedge=e;
             }
         free(e);//释放申请malloc的动态内存
 }
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <h5><span id="wan-zheng-dai-ma">完整代码</span><a href="#wan-zheng-dai-ma" class="header-anchor">#</a></h5><pre class="line-numbers language-xml"><code class="language-xml">#include &lt;bits/stdc++.h>
 using  namespace  std;
 typedef char VertexType;
