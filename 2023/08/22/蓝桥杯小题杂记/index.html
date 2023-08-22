@@ -401,14 +401,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.6k
+                    2.1k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    6 分
+                    8 分
                 </div>
                 
 
@@ -501,8 +501,28 @@
   <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2><span id="ti-mu">题目③</span><a href="#ti-mu" class="header-anchor">#</a></h2><blockquote>
+<p><strong>题目描述本题为填空题，只需要算出结果后，在代码中使用输出语句将所填结果输出即可。给定数列 1,1,1,3,5,9,17,⋯从第 4 项开始，每项都是前 3 项的和。求第 20190324 项的最后 4 位数字</strong></p>
+</blockquote>
+<h3><span id="si-lu">思路</span><a href="#si-lu" class="header-anchor">#</a></h3><blockquote>
+<p>这道题的核心问题其实就对数据过大的处理，其实解决方案和第一题是一模一样的，题目需要你求最后四位数字，那我们就通过取余去保留最后四位数字，又因为根据加分的原则，最后四位数的相加和其它位上的数没有关联，所有我们直接通过取余去缩小数据的值，在不影响所求结果的情况下继续使数据以较小的值进行相加。这样就可以完美解决本题了</p>
+</blockquote>
+<h3><span id="yuan-dai-ma">源代码</span><a href="#yuan-dai-ma" class="header-anchor">#</a></h3><pre class="line-numbers language-cpp"><code class="language-cpp"><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;iostream></span></span>
+<span class="token keyword">using</span> <span class="token keyword">namespace</span> std<span class="token punctuation">;</span>
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span> <span class="token keyword">int</span> a<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">,</span>b<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">,</span>c<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">,</span>temp<span class="token punctuation">;</span><span class="token comment" spellcheck="true">//初始化最开始的前三位数</span>
+   <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i<span class="token operator">=</span><span class="token number">4</span><span class="token punctuation">;</span>i<span class="token operator">&lt;=</span><span class="token number">20190324</span><span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span><span class="token comment" spellcheck="true">//从第四位开始变量，遍历过程是a，b，c每次整体向后移一位</span>
+   <span class="token punctuation">{</span> temp<span class="token operator">=</span>c<span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//c代表最新的要更新的那个值，由于最新的那个值是前三位的值之和，平移的同时c的原数据不应被覆盖，所以我们拿一个临时变量temp用来存储c变量的原数据</span>
+     c<span class="token operator">=</span><span class="token punctuation">(</span>a<span class="token operator">+</span>b<span class="token operator">+</span>c<span class="token punctuation">)</span><span class="token operator">%</span><span class="token number">10000</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//把最新的值赋值给c，整除10000是为了缩小数据的值，保留最后四位</span>
+     a<span class="token operator">=</span>b<span class="token punctuation">;</span><span class="token comment" spellcheck="true">//将a数据向后平移一位，相当于把b的值赋给a</span>
+     b<span class="token operator">=</span>temp<span class="token punctuation">;</span><span class="token comment" spellcheck="true">//b数据也要向后平移一位，相当于要把c的原数据赋值给b</span>
+   <span class="token punctuation">}</span>
+   cout<span class="token operator">&lt;&lt;</span>c<span class="token operator">&lt;&lt;</span>endl<span class="token punctuation">;</span><span class="token comment" spellcheck="true">//c是最新的那个所求值，输出c即可</span>
+  <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <h2><span id="zong-jie">总结</span><a href="#zong-jie" class="header-anchor">#</a></h2><blockquote>
-<p><strong>这两道题其实都存在对数据位数上的条件判断，对此我们可以有两种处理方案。①：灵活运用整除和取余，来去除数据的位数或者取出指定位数，以此来解决位数的条件判断问题。②：我们可以将数字直接转换成字符串类型，然后应用范围for循环依次对字符串的各个位数进行条件判断。还有这两道题还有一个烦人的点就是数据溢出问题，无论是题目一的乘积还是题目二的求总平方和，它们的结果的数据都会很大，这时候呢，我们要么采用题目一的分而治方式：先将明显存在的0计数完，然后去除计数完的0，然后运用乘法原则，发现数据的有些位数其实根本影响不到本题的求解，于是直接利用取余运算，将冗余部分的位数去除。或者采用第二题的方式，直接将计数变量的类型定位 long long 类型以支持数据的正常输出。</strong></p>
+<p><strong>这第一题和第二题其实都存在对数据位数上的条件判断，对此我们可以有两种处理方案。①：灵活运用整除和取余，来去除数据的位数或者取出指定位数，以此来解决位数的条件判断问题。②：我们可以将数字直接转换成字符串类型，然后应用范围for循环依次对字符串的各个位数进行条件判断。还有这两道题还有一个烦人的点就是数据溢出问题，无论是题目一的乘积还是题目二的求总平方和，它们的结果的数据都会很大，这时候呢，我们要么采用题目一的分而治方式：先将明显存在的0计数完，然后去除计数完的0，然后运用乘法原则，发现数据的有些位数其实根本影响不到本题的求解，于是直接利用取余运算，将冗余部分的位数去除。或者采用第二题的方式，直接将计数变量的类型定位 long long 类型以支持数据的正常输出。第三道题核心就是保留最后四位数以减少数据的溢出，原理其实和第一题差不多。</strong></p>
 </blockquote>
 
                 
@@ -820,12 +840,12 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">
-                        <span class="chip bg-color">数据结构</span>
-                    </a>
-                    
                     <a href="/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF/">
                         <span class="chip bg-color">蓝桥杯</span>
+                    </a>
+                    
+                    <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">
+                        <span class="chip bg-color">数据结构</span>
                     </a>
                     
                     <a href="/tags/%E5%9B%9E%E6%BA%AF%E7%AE%97%E6%B3%95/">
@@ -1054,7 +1074,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">7.7k</span>&nbsp;字
+                class="white-color">8.2k</span>&nbsp;字
             
             
             
