@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="蓝桥杯2020年省赛填空题(七段码), 浪浪猪">
+    <meta name="keywords" content="大数求阶乘/相加问题, 浪浪猪">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>蓝桥杯2020年省赛填空题(七段码) | 浪浪猪</title>
+    <title>大数求阶乘/相加问题 | 浪浪猪</title>
     <link rel="icon" type="image/png" href="/favicon1.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -250,12 +250,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/12.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/14.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">蓝桥杯2020年省赛填空题(七段码)</h1>
+                    <h1 class="description center-align post-title">大数求阶乘/相加问题</h1>
                 </div>
             </div>
         </div>
@@ -375,12 +375,8 @@
                                 <span class="chip bg-color">蓝桥杯</span>
                             </a>
                         
-                            <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">
-                                <span class="chip bg-color">数据结构</span>
-                            </a>
-                        
-                            <a href="/tags/%E5%9B%9E%E6%BA%AF%E7%AE%97%E6%B3%95/">
-                                <span class="chip bg-color">回溯算法</span>
+                            <a href="/tags/%E5%A4%A7%E6%95%B0%E8%BF%90%E7%AE%97/">
+                                <span class="chip bg-color">大数运算</span>
                             </a>
                         
                     </div>
@@ -395,28 +391,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2023-08-21
+                    2023-08-23
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2023-08-21
+                    2023-08-23
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.2k
+                    2.6k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    4 分
+                    9 分
                 </div>
                 
 
@@ -436,73 +432,182 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1><span id="lan-qiao-bei-qi-duan-ma-2020-nian-sheng-sai">蓝桥杯：七段码（2020 年省赛）</span><a href="#lan-qiao-bei-qi-duan-ma-2020-nian-sheng-sai" class="header-anchor">#</a></h1><p>小蓝要用七段码数码管来表示一种特殊的文字。</p>
-<p><img src="https://img1.imgtp.com/2023/08/21/6lAHTPLZ.jpg"></p>
-<p> 七段码上图给出了七段码数码管的一个图示，数码管中一共有7 段可以发光的二极管，<br> 分别标记为a, b, c, d, e, f, g。小蓝要选择一部分二极管（至少要有一个）发光来表达字符。<br> 在设计字符的表达时，要求所有发光的二极管是连成一片的。<br>例如：b 发光，其他二极管不发光可以用来表达一种字符。<br>例如：c 发光，其他二极管不发光可以用来表达一种字符。这种方案与上一行的方案可以用来表示不同的字符，尽管看上去比较相似。<br>例如：a, b, c, d, e 发光，f, g 不发光可以用来表达一种字符。<br>例如：b, f 发光，其他二极管不发光则不能用来表达一种字符，因为发光的二极管没有连成一片。<br>请问，小蓝可以用七段码数码管表达多少种不同的字符？</p>
-<h2><span id="wen-ti-fen-xi">问题分析</span><a href="#wen-ti-fen-xi" class="header-anchor">#</a></h2><h3><span id="wen-ti-jian-hua">问题简化</span><a href="#wen-ti-jian-hua" class="header-anchor">#</a></h3><blockquote>
-<p><strong>根据题意所述，它需要我们求出能二极管能表达出的字符种类有多少个。那我们很容易就能想到这道题完全可以转换成求点到任意点的路径数量有多少的题目。但是由于a-&gt;b显示的图形和b-&gt;a显示出来的其实是一样的，所以最后的答案应该是路径的总数量/2</strong></p>
+                <h1><span id="da-shu-qiu-jie-cheng-xiang-jia-wen-ti">大数求阶乘/相加问题</span><a href="#da-shu-qiu-jie-cheng-xiang-jia-wen-ti" class="header-anchor">#</a></h1><h2><span id="da-shu-qiu-jie-cheng">大数求阶乘</span><a href="#da-shu-qiu-jie-cheng" class="header-anchor">#</a></h2><h3><span id="ti-mu-miao-shu">题目描述</span><a href="#ti-mu-miao-shu" class="header-anchor">#</a></h3><blockquote>
+<p>题目描述<br>给定一个正整数 n，求出 n! 的值。<br><strong>输入描述</strong></p>
 </blockquote>
-<h3><span id="jie-jue-wen-ti">解决问题</span><a href="#jie-jue-wen-ti" class="header-anchor">#</a></h3><h4><span id="wen-ti-ti-chu">问题提出</span><a href="#wen-ti-ti-chu" class="header-anchor">#</a></h4><blockquote>
-<p><strong>既然是搜索路径的题目，我们很容易就可以想到dfs深度优先遍历搜索算法，也就是选择任意一个点作为起始点，访问过的结点我们全部标记为True，随后不断进入子结点，直到碰到退出条件。dfs算法会对每个访问过的路径进行标记，标记过的结点则无法再次访问，这就导致了如果一个点到另外一个结点有两条路，dfs就只能优先遍历程序设置的那条路，另外一条路则不会被计算在内（如下演示图）</strong></p>
-</blockquote>
-<p><strong>正常的dfs遍历:</strong><br><img src="https://img1.imgtp.com/2023/08/21/DdRZJJeg.gif" alt="dfs"><br><strong>本题需要的遍历:</strong><br><img src="https://img1.imgtp.com/2023/08/21/bVTN4XtD.gif" alt="遍历"></p>
-<h4><span id="jie-jue-fang-an">解决方案</span><a href="#jie-jue-fang-an" class="header-anchor">#</a></h4><blockquote>
-<p>如上两个演示图，我们可以看到问题所在是dfs遇到返回条件返回的时候，遍历过的结点依旧被标记，这就导致了从B-&gt;D-E的路线，dfs其实是无法实现计算在内的。既然是标记结点的问题，那我们只要每一次遇到返回条件返回结点的时候把已经返回了的结点标记重置为False（未访问状态）不就可以完美解决本题了嘛，这就是基于DFS改编的<strong>回溯算法</strong>的雏形</p>
-</blockquote>
-<h3><span id="si-lu">思路</span><a href="#si-lu" class="header-anchor">#</a></h3><div id="flowchart-0" class="flow-chart"></div>
-
-<h2><span id="he-xin-dai-ma-jiang-jie">核心代码讲解</span><a href="#he-xin-dai-ma-jiang-jie" class="header-anchor">#</a></h2><pre class="line-numbers language-xml"><code class="language-xml">void Backtracking(int i, int visit[], int *count) {
-    for (int j = 0; j &lt; 7; j++) /*依次从a（0），b（1），c（2），d(3)，e(4)，f(5)，g(6)这七个二极管分别作为出发点进行遍历*/
-    {
-        if (graph[i][j] == 1 &amp;&amp; visit[j] == 0) //如果两个结点之间有连接且要访问的那个结点没有被访问过则满足条件
-        {
-            visit[j]=1;//提前标记我们要进入的那个结点已经被我们访问了
-            dfs(j, visit, count);//进入新结点，从新结点的基础上继续搜索路径
-            ( *count)++;//回退的时候进行计数
-            visit[j] = 0;//将已经回退的那个结点访问标记重置为0
-                            }
-                                    }
-}
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <blockquote>
-<p><strong>这里有一个细节要注意：我们的count初始化进来是值是1，因为存在一种情况：如果结点走到无路可走，程序其实是从if判断语句那里直接退出的，根本就没有进入if语句内部。也就是说当前的路径没有被计数进去，所以我们要在初始化count的时候就让它天然的就是以1为起步。</strong></p>
+<p>输入一个正整数 n，n&lt;=1000。</p>
 </blockquote>
-<pre class="line-numbers language-c++"><code class="language-c++">#include <iostream>
-using namespace std;
-int graph[7][7] = {//如果两个相邻的结点有连接，则标记为1，例如：(0,1)，0->1有连接，那么我们的graph[0][1]=1，同时1->0也是有连接的，那我们的graph[1][0]=1
-        {1, 1, 0, 0, 0, 1, 0},
-        {1, 1, 1, 0, 0, 0, 1},
-        {0, 1, 1, 1, 0, 0, 1},
-        {0, 0, 1, 1, 1, 0, 0},
-        {0, 0, 0, 1, 1, 1, 1},
-        {1, 0, 0, 0, 1, 1, 1},
-        {0, 1, 1, 0, 1, 1, 1}
-};
-void Backtracking(int i, int visit[], int *count) {
-    for (int j = 0; j < 7; j++) {
-        if (graph[i][j] == 1 && visit[j] == 0) {
-            visit[j]=1;
-            dfs(j, visit, count);
-            ( *count)++;
-            visit[j] = 0;
-                            }
-                                    }
-}
+<blockquote>
+<p><strong>输出描述</strong><br>输出 n! 。<br><strong>输入输出样例</strong></p>
+<blockquote>
+<p>示例<br>输入</p>
+<blockquote>
+<pre><code>10
+</code></pre>
+</blockquote>
+</blockquote>
+</blockquote>
+<blockquote>
+<blockquote>
+<p>输出</p>
+<blockquote>
+<pre><code>3628800
+</code></pre>
+</blockquote>
+</blockquote>
+</blockquote>
+<h3><span id="jie-ti-si-lu">解题思路</span><a href="#jie-ti-si-lu" class="header-anchor">#</a></h3><blockquote>
+<p>刚看到这道题目的时候，我的内心：什么？？求阶乘？？？这个简单，写一个采用递归的方法，递归不就完事了嘛。一分钟以后，我毫不犹豫点击提交，一看，就通过了俩测试点（大哭.jpg）。既然出了问题，那就得先找出是什么原因导致的，题目说n&lt;=1000。那我就拿n=1000去测试一下程序，一看数据结果是鸭蛋(0)。到这里基本上问题就明朗了，当n越来越大的时候，前几个小的数还可以正常输出，后面的大的数据所计算出来的阶乘值已经超过了定义的int类型的最大范围，导致结果溢出。n=1000的时候即使是long long 类型的数据类型也无法承受它的结果值。好家伙，突然感觉路就被堵死了，这咋办？既然问题是大的数据溢出造成的，那我们干脆就把这个大的数据存放进数组里面，这样就可以保证数据不溢出了。那新的问题又来了，这个大数被我们存进数组了，那我们怎么让它跟下一个数据进行相乘呢？？？？好在天无绝人之路，小学学的竖式相乘的法则可以帮我们完美解决这个问题。接下来我们来介绍一下这个竖式相乘法则：</p>
+<blockquote>
+<p>直接放例子:  12×39916878</p>
+</blockquote>
+</blockquote>
+<pre class="line-numbers language-cpp"><code class="language-cpp">         <span class="token number">12</span>
+   <span class="token number">39916878</span>       <span class="token comment" spellcheck="true">//第一步先将两个数对应的位数对齐(个位对个位，十位对十位......)</span>
+         <span class="token number">96</span>      <span class="token comment" spellcheck="true">//第二步接下来我们让大数的个位数8去乘12,可得到96</span>
+        <span class="token number">84</span>      <span class="token comment" spellcheck="true">//同理我们让大数的十位上的数7去乘12,可得到84</span>
+       <span class="token number">96</span>      <span class="token comment" spellcheck="true">//百位上的数也同理</span>
+      <span class="token number">72</span>      <span class="token comment" spellcheck="true">//千位上的数也同理</span>
+     <span class="token number">12</span>      <span class="token comment" spellcheck="true">//万位上的数也同理</span>
+   <span class="token number">108</span>      <span class="token comment" spellcheck="true">//十万位上的数也同理</span>
+  <span class="token number">108</span>      <span class="token comment" spellcheck="true">//百万位位上的数也同理</span>
+  <span class="token number">36</span>      <span class="token comment" spellcheck="true">//千万位上的数也同理</span>
+  <span class="token number">479002536</span>        <span class="token comment" spellcheck="true">//最后我们依次把这些数相加存入数组就可以得到结果了</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<blockquote>
+<p><strong>这个竖式相乘法则就是解决我们本题的关键，看了上面的这个例子，相信你心中应该已经有点灵感了吧？？如果没有也没关系，接下来我们用程序语言来实现这个算法</strong></p>
+</blockquote>
+<hr>
+<blockquote>
+<p> <strong>首先我们要初始化一个数组，记作Big_data;同时初始化当前数据每个位数上的数字，这里我们为了直观一点，将大数的个位数设置在数组下标1的位置，十位、百位…..则对应数组下标2、3……</strong></p>
+</blockquote>
+<pre class="line-numbers language-cpp"><code class="language-cpp"> <span class="token keyword">int</span> Big_data<span class="token punctuation">[</span><span class="token number">10000</span><span class="token punctuation">]</span><span class="token operator">=</span><span class="token punctuation">{</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">}</span>
+ <span class="token keyword">int</span> n，i<span class="token punctuation">,</span>j<span class="token punctuation">;</span><span class="token comment" spellcheck="true">//n用于所需阶乘的数据输入，i和j是为了下面的数据遍历</span>
+ cin<span class="token operator">>></span>n<span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<blockquote>
+<p><strong>接下来我们要进行第二步：将依次递增上去的较小数与大数的各个位进行相乘，将各个位数的结果存储在位数对应的数组中</strong></p>
+</blockquote>
+<pre class="line-numbers language-cpp"><code class="language-cpp"><span class="token keyword">for</span><span class="token punctuation">(</span>i<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">;</span>i<span class="token operator">&lt;=</span>n<span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span>
+  <span class="token punctuation">{</span>   <span class="token keyword">for</span><span class="token punctuation">(</span>j<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">;</span>j<span class="token operator">&lt;=</span>last<span class="token punctuation">;</span>j<span class="token operator">++</span><span class="token punctuation">)</span>
+      <span class="token punctuation">{</span> Big_data<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token operator">=</span>Big_data<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token operator">*</span>i<span class="token punctuation">;</span><span class="token comment" spellcheck="true">//这个操作是让每个 位数产生的乘积先临时存入数组中，以上面的数据为例子，个位数产生的乘积96将被存入数组下标1中，下标2将存入十位上产生的乘积84，以此类推。</span>
+        <span class="token punctuation">}</span>  
+           <span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<blockquote>
+<p><strong>第三步：每个位置上的乘积我们已经储存好了，接下来我们就要对这些存储好的数组数据进行相加处理了</strong></p>
+</blockquote>
+<pre class="line-numbers language-cpp"><code class="language-cpp"><span class="token keyword">for</span><span class="token punctuation">(</span>j<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">;</span>j<span class="token operator">&lt;=</span>last<span class="token operator">||</span>Big_data<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token operator">!=</span><span class="token number">0</span><span class="token punctuation">;</span>j<span class="token operator">++</span><span class="token punctuation">)</span><span class="token comment" spellcheck="true">//这里的Big_data[j]!=0是为了让两数相乘之后的最高位上的数据能够更新,本来我们相乘之前那个大数是个8位数，那我们j能遍历到的最高位也就是八，如果相乘的数结果是个9位数的话，那最高位就没办法添加进我们的最高位数组，所以这个Big_data[j]!=0就是为了当j==9的时候如果Big_data[9]不是0的话，说明新的大数是有九位数的，所以我们要进入这个条件，把第九位数据更新进Big_data数组</span>
+<span class="token punctuation">{</span> Big_data<span class="token punctuation">[</span>j<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token operator">=</span>Big_data<span class="token punctuation">[</span>j<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token operator">+</span><span class="token punctuation">(</span>Big_data<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token operator">/</span><span class="token number">10</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//以上面的个位和十位数举例子就是让96中的9和84去相加</span>
+  Big_data<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token operator">=</span>Big_data<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token operator">%</span><span class="token number">10</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//更新大数每个位置上的数据，以上面的例子的个位数就是96的9已经加进84了，剩下的6就是我们个位数上剩的值了，那我们把6添加进Big_data[1]，作为我们的个位。</span>
+ <span class="token punctuation">}</span>
+ last<span class="token operator">=</span>j<span class="token number">-1</span><span class="token comment" spellcheck="true">//更新这个大数的最高位数值</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<blockquote>
+<p><strong>到这里数据已经被我们处理完成了，此时Big_data数组中下标1-last中已经存了我们这个大数的各个位数的数值，我们只要全部把他们输出了就可以得到我们这个大数的值了。</strong></p>
+</blockquote>
+<pre class="line-numbers language-cpp"><code class="language-cpp">  <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i<span class="token operator">=</span>last<span class="token punctuation">;</span>i<span class="token operator">></span><span class="token number">0</span><span class="token punctuation">;</span>i<span class="token operator">--</span><span class="token punctuation">)</span>
+  <span class="token punctuation">{</span>
+   cout<span class="token operator">&lt;&lt;</span>Big_data<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//依次输出大数各个位数上的值</span>
+     <span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<h3><span id="yuan-dai-ma">源代码</span><a href="#yuan-dai-ma" class="header-anchor">#</a></h3><pre class="line-numbers language-cpp"><code class="language-cpp">
+<span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;bits/stdc++.h></span></span>
+<span class="token keyword">using</span> <span class="token keyword">namespace</span> std<span class="token punctuation">;</span>
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span>  <span class="token keyword">int</span> last<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">,</span>n<span class="token punctuation">,</span>j<span class="token punctuation">;</span>
+    <span class="token keyword">int</span> Big_data<span class="token punctuation">[</span><span class="token number">10000</span><span class="token punctuation">]</span><span class="token operator">=</span><span class="token punctuation">{</span><span class="token number">0</span><span class="token punctuation">,</span><span class="token number">1</span><span class="token punctuation">,</span><span class="token number">0</span><span class="token punctuation">}</span><span class="token punctuation">;</span>
+    cin<span class="token operator">>></span>n<span class="token punctuation">;</span>
+    <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">;</span>i<span class="token operator">&lt;=</span>n<span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+        <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> j<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">;</span>j<span class="token operator">&lt;=</span>last<span class="token punctuation">;</span>j<span class="token operator">++</span><span class="token punctuation">)</span>
+        <span class="token punctuation">{</span> Big_data<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token operator">=</span>Big_data<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token operator">*</span>i<span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
 
-int main() {
-    int count = 1;//将count变量用来计数
-    int visit[7] = {0};//初始化访问标记数组
-    Backtracking(0, visit, &count);//调用回溯函数
-    cout << count / 2 << endl;//输出种类数
-    return 0;
-}
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></iostream></code></pre>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.2.7/raphael.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/flowchart/1.6.5/flowchart.min.js"></script><textarea id="flowchart-0-code" style="display: none">st=&gt;start: 创建一个7×7的数组，用来存储结点的连接情况
-op=&gt;operation: 自定义函数Backtracking用来遍历结点
-op1=&gt;operation: 在Backtracking函数中改编DFS算法使之成为回溯算法，且符合条件后每次回退都进行路径数量的计数
-op2=&gt;operation: 因为我们要求的是路径所显示的图形，比如从a-&gt;b显示的图形和b-&gt;a显示出来的其实是一样的，所以最后我们要求的图形种类应该是总路径/2
-end=&gt;end: 输出总路径/2
-st-&gt;op-&gt;op1-&gt;op2-&gt;end</textarea><textarea id="flowchart-0-options" style="display: none">{"theme":"simple","scale":1,"line-width":2,"line-length":50,"text-margin":10,"font-size":12}</textarea><script>  var code = document.getElementById("flowchart-0-code").value;  var options = JSON.parse(decodeURIComponent(document.getElementById("flowchart-0-options").value));  var diagram = flowchart.parse(code);  diagram.drawSVG("flowchart-0", options);</script>
+        <span class="token keyword">for</span><span class="token punctuation">(</span> j<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">;</span>j<span class="token operator">&lt;=</span>last<span class="token operator">||</span>Big_data<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token operator">!=</span><span class="token number">0</span><span class="token punctuation">;</span>j<span class="token operator">++</span><span class="token punctuation">)</span>
+        <span class="token punctuation">{</span> Big_data<span class="token punctuation">[</span>j<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token operator">=</span>Big_data<span class="token punctuation">[</span>j<span class="token operator">+</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token operator">+</span>Big_data<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token operator">/</span><span class="token number">10</span><span class="token punctuation">;</span>
+          Big_data<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token operator">=</span>Big_data<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token operator">%</span><span class="token number">10</span><span class="token punctuation">;</span>
+        <span class="token punctuation">}</span>
+        last<span class="token operator">=</span>j<span class="token number">-1</span><span class="token punctuation">;</span>
+    <span class="token punctuation">}</span>
+    <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i<span class="token operator">=</span>last<span class="token punctuation">;</span>i<span class="token operator">></span><span class="token number">0</span><span class="token punctuation">;</span>i<span class="token operator">--</span><span class="token punctuation">)</span>
+    <span class="token punctuation">{</span>
+      cout<span class="token operator">&lt;&lt;</span>Big_data<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//依次输出大数各个位数上的值</span>
+    <span class="token punctuation">}</span>
+
+
+    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2><span id="da-shu-xiang-jia-wen-ti">大数相加问题</span><a href="#da-shu-xiang-jia-wen-ti" class="header-anchor">#</a></h2><h3><span id="ti-mu-miao-shu">题目描述</span><a href="#ti-mu-miao-shu" class="header-anchor">#</a></h3><blockquote>
+<p>输入两个整数 a 和 b，输出这两个整数的和。a 和 b 都不超过 100 位</p>
+</blockquote>
+<h3><span id="jie-ti-si-lu">解题思路</span><a href="#jie-ti-si-lu" class="header-anchor">#</a></h3><blockquote>
+<p>本题解题的原理与上面的竖式乘法原理类似，让程序模拟竖式加法去运算即可。下面我来简单介绍一下竖式加分：</p>
+</blockquote>
+<pre class="line-numbers language-cpp"><code class="language-cpp">  <span class="token number">89789</span>
+<span class="token operator">+</span> <span class="token number">78979</span>
+     <span class="token number">18</span>
+    <span class="token number">15</span>
+   <span class="token number">16</span>
+  <span class="token number">17</span>
+ <span class="token number">15</span>
+<span class="token operator">=</span><span class="token number">168768</span>     
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<blockquote>
+<p>第一题求大数阶乘的时候我们是从1开始逐次乘上去的，所以我们可以选择让个位数从数组的 下标1开始，而本题是直接通过输入两个大数，如果采用整数数组法，还需要去确认输入数据的位数，操作起来比较麻烦。所以本题我们代码部分采用另外一种字符串写法去执行：</p>
+</blockquote>
+<hr>
+<blockquote>
+<p><strong>首先我们先定义输入a,b，以及相加结果add_result的类型为字符串</strong></p>
+</blockquote>
+<pre class="line-numbers language-cpp"><code class="language-cpp">string add_result<span class="token punctuation">;</span>
+ string a <span class="token punctuation">,</span>b<span class="token punctuation">;</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<blockquote>
+<p><strong>接下来我们同样地从a，b两个字符串的末尾(大数的个位数)开始执行竖式加法原则，由于我们数据类型是字符类型的，所以数据的各个位数上对应的字符就要合理加减字符’0’去间接地转成整数，才可以让对应各个位数进行相加。我在源代码中引进了int c 整型变量用来临时存储位数相加之后的数据。然后我们可以通过对变量c的取余与字符’0’相加，我们就可以使各个位数上的结果还原成字符类型了。这样我们就可以解决字符之间相加的难题了。</strong></p>
+</blockquote>
+<pre class="line-numbers language-cpp"><code class="language-cpp"><span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i<span class="token operator">=</span>a<span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">,</span>j<span class="token operator">=</span>b<span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span>i<span class="token operator">>=</span><span class="token number">0</span><span class="token operator">||</span>j<span class="token operator">>=</span><span class="token number">0</span><span class="token operator">||</span>c<span class="token operator">!=</span><span class="token number">0</span><span class="token punctuation">;</span>i<span class="token operator">--</span><span class="token punctuation">,</span>j<span class="token operator">--</span><span class="token punctuation">)</span><span class="token comment" spellcheck="true">//从后往前遍历，相当于从个位数开始依次往前遍历，c!=0也是为了如果最高位有进位值的话，要更新最高位的数据</span>
+ <span class="token punctuation">{</span> <span class="token keyword">if</span><span class="token punctuation">(</span>i<span class="token operator">>=</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token comment" spellcheck="true">//如果a上面的位数有数据，则将该字符与字符'0'相减，得到差值（字符间接转整数），方便两个大数位数之间的相加</span>
+    c<span class="token operator">+</span><span class="token operator">=</span>a<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token operator">-</span><span class="token string">'0'</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span>j<span class="token operator">>=</span><span class="token number">0</span><span class="token punctuation">)</span><span class="token comment" spellcheck="true">//如果b上面的位数有数据，则将该字符与字符'0'相减，得到差值，（字符间接转整数），方便两个大数位数之间的相加</span>
+    c<span class="token operator">+</span><span class="token operator">=</span>b<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token operator">-</span><span class="token string">'0'</span><span class="token punctuation">;</span>
+    add_result<span class="token operator">+</span><span class="token operator">=</span>c<span class="token operator">%</span><span class="token number">10</span><span class="token operator">+</span><span class="token string">'0'</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//将相加后的得出的位数结果值还原成字符类型</span>
+    c<span class="token operator">=</span>c<span class="token operator">/</span><span class="token number">10</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">// 进位值，加入到下一位的数据相加之中去</span>
+ <span class="token punctuation">}</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<blockquote>
+<p><strong>到这里我们add_result存储的结果其实是从个位开始然后到高位的，所以我们输出的时候要把这个字符串翻转一下再输出</strong></p>
+</blockquote>
+<pre class="line-numbers language-cpp"><code class="language-cpp"><span class="token function">reverse</span><span class="token punctuation">(</span>add_result<span class="token punctuation">.</span><span class="token function">begin</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>add_result<span class="token punctuation">.</span><span class="token function">end</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//将字符串add_result翻转过来</span>
+ cout<span class="token operator">&lt;&lt;</span>add_result<span class="token operator">&lt;&lt;</span>endl<span class="token punctuation">;</span><span class="token comment" spellcheck="true">//输出结果</span>
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-cpp"><code class="language-cpp"><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;bits/stdc++.h></span></span>
+<span class="token keyword">using</span> <span class="token keyword">namespace</span> std<span class="token punctuation">;</span>
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
+<span class="token punctuation">{</span> string add_result<span class="token punctuation">;</span>
+ string a <span class="token punctuation">,</span>b<span class="token punctuation">;</span>
+ <span class="token keyword">int</span> c<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>
+ cin<span class="token operator">>></span>a<span class="token operator">>></span>b<span class="token punctuation">;</span>
+ <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i<span class="token operator">=</span>a<span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">,</span>j<span class="token operator">=</span>b<span class="token punctuation">.</span><span class="token function">size</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">;</span>i<span class="token operator">>=</span><span class="token number">0</span><span class="token operator">||</span>j<span class="token operator">>=</span><span class="token number">0</span><span class="token operator">||</span>c<span class="token operator">!=</span><span class="token number">0</span><span class="token punctuation">;</span>i<span class="token operator">--</span><span class="token punctuation">,</span>j<span class="token operator">--</span><span class="token punctuation">)</span>
+ <span class="token punctuation">{</span> <span class="token keyword">if</span><span class="token punctuation">(</span>i<span class="token operator">>=</span><span class="token number">0</span><span class="token punctuation">)</span>
+    c<span class="token operator">+</span><span class="token operator">=</span>a<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token operator">-</span><span class="token string">'0'</span><span class="token punctuation">;</span>
+    <span class="token keyword">if</span><span class="token punctuation">(</span>j<span class="token operator">>=</span><span class="token number">0</span><span class="token punctuation">)</span>
+    c<span class="token operator">+</span><span class="token operator">=</span>b<span class="token punctuation">[</span>j<span class="token punctuation">]</span><span class="token operator">-</span><span class="token string">'0'</span><span class="token punctuation">;</span>
+    add_result<span class="token operator">+</span><span class="token operator">=</span>c<span class="token operator">%</span><span class="token number">10</span><span class="token operator">+</span><span class="token string">'0'</span><span class="token punctuation">;</span>
+    c<span class="token operator">=</span>c<span class="token operator">/</span><span class="token number">10</span><span class="token punctuation">;</span>
+ <span class="token punctuation">}</span>
+ <span class="token function">reverse</span><span class="token punctuation">(</span>add_result<span class="token punctuation">.</span><span class="token function">begin</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>add_result<span class="token punctuation">.</span><span class="token function">end</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
+ cout<span class="token operator">&lt;&lt;</span>add_result<span class="token operator">&lt;&lt;</span>endl<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2><span id="zong-jie">总结</span><a href="#zong-jie" class="header-anchor">#</a></h2><blockquote>
+<p><strong>这两道题目虽然代码的处理方式不一样，但是他们的原理都是基于竖着乘法(加法)法则来运行的，无论是加法还是乘法，我们都是要从个位开始操作，第一题求阶乘的时候我们是从1开始逐次乘上去的，相当于就是从个位数开始的，所以我们可以利用数组来从左向右依次存储大数的低位到高位的数据情况。最后输出的时候将各个位数数据反过来输出即可。而第二题两个大数相加，由于他们是通过键盘输入进来的数据，输入进来的位数从高到低是依次从左向右排列的。但是我们相加的过程毕竟还是要从个位数开始执行的，我们还要去确定两个大数的个位数的位置下标，比较繁琐。所以我们换了一种思路，通过将两个数定义成字符串类型，通过字符串的size()方法名，找到字符串的长度，然后从后往前遍历，且通过加减字符’0’，来间接实现对字符数据之间的相加减。最后将结果字符串翻转输出即可。</strong></p>
+</blockquote>
+
                 
             </div>
             <hr/>
@@ -528,7 +633,7 @@ st-&gt;op-&gt;op1-&gt;op2-&gt;end</textarea><textarea id="flowchart-0-options" s
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://langlangzhu.top/2023/08/21/%E8%93%9D%E6%A1%A5%E6%9D%AF2020%E5%B9%B4%E7%9C%81%E8%B5%9B%E5%A1%AB%E7%A9%BA%E9%A2%98-%E4%B8%83%E6%AE%B5%E7%A0%81/">http://langlangzhu.top/2023/08/21/%E8%93%9D%E6%A1%A5%E6%9D%AF2020%E5%B9%B4%E7%9C%81%E8%B5%9B%E5%A1%AB%E7%A9%BA%E9%A2%98-%E4%B8%83%E6%AE%B5%E7%A0%81/</a>
+                    <a href="http://langlangzhu.top/2023/08/23/%E5%A4%A7%E6%95%B0%E7%9B%B8%E5%8A%A0%E9%97%AE%E9%A2%98/">http://langlangzhu.top/2023/08/23/%E5%A4%A7%E6%95%B0%E7%9B%B8%E5%8A%A0%E9%97%AE%E9%A2%98/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -570,12 +675,8 @@ st-&gt;op-&gt;op1-&gt;op2-&gt;end</textarea><textarea id="flowchart-0-options" s
                                     <span class="chip bg-color">蓝桥杯</span>
                                 </a>
                             
-                                <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">
-                                    <span class="chip bg-color">数据结构</span>
-                                </a>
-                            
-                                <a href="/tags/%E5%9B%9E%E6%BA%AF%E7%AE%97%E6%B3%95/">
-                                    <span class="chip bg-color">回溯算法</span>
+                                <a href="/tags/%E5%A4%A7%E6%95%B0%E8%BF%90%E7%AE%97/">
+                                    <span class="chip bg-color">大数运算</span>
                                 </a>
                             
                         </div>
@@ -745,9 +846,60 @@ st-&gt;op-&gt;op1-&gt;op2-&gt;end</textarea><textarea id="flowchart-0-options" s
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
+            <div class="card">
+                <a href="/2023/08/23/%E5%A4%A7%E6%95%B0%E7%9B%B8%E5%8A%A0%E9%97%AE%E9%A2%98/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="大数求阶乘/相加问题">
+                        
+                        <span class="card-title">大数求阶乘/相加问题</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-08-23
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            浪浪猪
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF/">
+                        <span class="chip bg-color">蓝桥杯</span>
+                    </a>
+                    
+                    <a href="/tags/%E5%A4%A7%E6%95%B0%E8%BF%90%E7%AE%97/">
+                        <span class="chip bg-color">大数运算</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
             <div class="card">
                 <a href="/2023/08/22/%E8%93%9D%E6%A1%A5%E6%9D%AF%E5%B0%8F%E9%A2%98%E6%9D%82%E8%AE%B0/">
                     <div class="card-image">
@@ -765,9 +917,9 @@ st-&gt;op-&gt;op1-&gt;op2-&gt;end</textarea><textarea id="flowchart-0-options" s
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2023-08-22
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-08-22
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -781,51 +933,6 @@ st-&gt;op-&gt;op1-&gt;op2-&gt;end</textarea><textarea id="flowchart-0-options" s
                     
                     <a href="/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF/">
                         <span class="chip bg-color">蓝桥杯</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/2023/08/20/%E5%9B%BE%E7%9A%84%E7%AE%80%E5%8D%95%E7%90%86%E8%A7%A3/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/8.jpg" class="responsive-img" alt="图的简单理解">
-                        
-                        <span class="card-title">图的简单理解</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2023-08-20
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-user fa-fw"></i>
-                            浪浪猪
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">
-                        <span class="chip bg-color">数据结构</span>
                     </a>
                     
                 </div>
