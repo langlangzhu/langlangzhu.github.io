@@ -505,7 +505,7 @@
 <span class="token punctuation">}</span><span class="token comment" spellcheck="true">//这个代码需要结合思路部分的第二张图片去理解更佳</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <blockquote>
-<p><strong>对于左右插入顺序的执行，在插入函数中最后的实现其实是偏右边的，比如k=0，那我们新的结点插入的位置是在0结点的右边的。右边插入我们解决了，接下来我们按照相对性的普遍规律，只要让我们输入的k=-1结点(这只是假设，假设0结点前面有一个-1结点)，那结点就会插入到-1结点的右边，这不就相当于在结点0的左边嘛。这样我们左边插入和右边插入的问题就迎刃而解了</strong></p>
+<p><strong>对于左右插入顺序的执行，在插入函数中最后的实现其实是偏右边的，比如k=0，那我们新的结点插入的位置是在0结点的右边的。右边插入我们解决了，接下来我们按照相对性的普遍规律，我们输入k=-1结点(这只是假设，假设0结点前面有一个-1结点)，那结点就会插入到-1结点的右边，这不就相当于在结点0的左边嘛。这样我们左边插入和右边插入的问题就迎刃而解了</strong></p>
 </blockquote>
 <pre class="line-numbers language-cpp"><code class="language-cpp"> <span class="token keyword">if</span><span class="token punctuation">(</span>z<span class="token operator">==</span><span class="token number">0</span><span class="token punctuation">)</span>
       <span class="token punctuation">{</span>
