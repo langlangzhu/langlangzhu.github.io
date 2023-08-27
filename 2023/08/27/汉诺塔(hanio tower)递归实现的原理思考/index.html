@@ -408,7 +408,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    11 分
+                    12 分
                 </div>
                 
 
@@ -475,16 +475,16 @@
 </blockquote>
 <p><img src="https://img1.imgtp.com/2023/08/27/o63KqaR9.png" alt="@抽象前 "><br><img src="https://img1.imgtp.com/2023/08/27/Ks1MaTNd.png" alt="@抽象后"></p>
 <blockquote>
-<p>接下来我们将抽象后的盘子进行转移，按照n=2的转移办法，粉色的盘子会被投放到B柱子上，然后蓝色的盘子将会被投放到C柱子上。(状态图如下图)<br><img src="https://img1.imgtp.com/2023/08/27/AVIQpxBA.png" alt="@状态图"><br>到了这个状态之后，按照转移的顺序，我们应该把粉色的盘子转移到C柱就可以完成认为了。但是！我们这个粉色的盘子是我们抽象出来的，它内部还有俩盘子呢：所以我们要对着两个盘子再次进行分析。</p>
+<p>接下来我们将抽象后的盘子进行转移，按照n=2的转移办法，粉色的盘子会被投放到B柱子上，然后蓝色的盘子将会被投放到C柱子上。(状态图如下图)<br><img src="https://img1.imgtp.com/2023/08/27/AVIQpxBA.png" alt="@状态图"><br>到了这个状态之后，按照转移的顺序，我们应该把粉色的盘子转移到C柱就可以完成任务了。但是！我们这个粉色的盘子是我们抽象出来的，它内部还有俩盘子呢：所以我们要对着两个盘子再次进行分析。</p>
 <blockquote>
 <p><img src="https://img1.imgtp.com/2023/08/27/mB8iVUkq.png" alt="@粉色盒子内部"></p>
 </blockquote>
 </blockquote>
 <h4><span id="di-er-bu-chai-jie">第二步拆解</span><a href="#di-er-bu-chai-jie" class="header-anchor">#</a></h4><blockquote>
-<p><strong>由于第一步我们是将蓝色盘子上方的两个盘子抽象成了一个，我们程序执行的时候可不能整体移动，所以我们要对这个粉色的整体盘子再次进行拆解，根据第一步拆解的最后步骤我们可以看到，我们第二步拆解的时候，粉色盘子是位于B柱子的时候进来的，那个视角的参照物我们是基于粉色和蓝色盘子的视角(主视角)来看的。所以从那个视角来看，我们的粉色盘子是从B柱子进入第二步拆解。既然我们进入了第二步拆解，我们的视角参照物应该切换成基于黄色和绿色盘子的视角(次视角)，我们要从这个视角来重复执行A-&gt;B,A-&gt;C，B-&gt;C的步骤，但是这里要注意，我们最终的观察角度是通过主视角来看的，于是主视角所看到的B柱子其实对应的是主视角的C柱子。接下来我们通过图片来加深一下理解</strong><br>如下图。<br><img src="https://img1.imgtp.com/2023/08/27/TMGmviqi.png" alt="@二次拆解后，次视角"><br>接下来我们来看一下次视角状态下盘子移动后的A-&gt;B，A-&gt;C的中间结果<br><img src="https://img1.imgtp.com/2023/08/27/ejF9lz1G.gif" alt="@次视角中进行移动的中间结果图"><br>那我们的主视角是什么样的情况呢，接下来我们来看一下次视角对应的主视角盘子移动情况<br><img src="https://img1.imgtp.com/2023/08/27/TrZMAKdX.gif" alt="@主视角中进行移动的中间结果图"></p>
+<p><strong>由于第一步我们是将蓝色盘子上方的两个盘子抽象成了一个，我们程序执行的时候可不能整体移动，所以我们要对这个粉色的整体盘子再次进行拆解，根据第一步拆解的最后步骤我们可以看到，我们第二步拆解的时候，粉色盘子是位于B柱子的时候进来的，那个视角的参照物我们是基于粉色和蓝色盘子的视角(主视角)来看的。所以从那个视角来看，我们的粉色盘子是从B柱子进入第二步拆解。既然我们进入了第二步拆解，我们的视角参照物应该切换成基于黄色和绿色盘子的视角(次视角)，我们要从这个视角来重复执行A-&gt;B,A-&gt;C，B-&gt;C的步骤，但是这里要注意，我们最终的观察角度是通过主视角来看的，于是主视角所看到的B柱子其实对应的是次视角的C柱子：因为我们是从主视角的B柱子进入的次视角，在次视角中最后是要将盘子从A-&gt;C，随后返回给主视角，所以说次视角的C相当于主视角的B柱子，次视角的B相当于主视角的C柱子。接下来我们通过图片来加深一下理解</strong><br>如下图。<br><img src="https://img1.imgtp.com/2023/08/27/TMGmviqi.png" alt="@二次拆解后，次视角"><br>接下来我们来看一下次视角状态下盘子移动后的A-&gt;B，A-&gt;C的中间结果<br><img src="https://img1.imgtp.com/2023/08/27/ejF9lz1G.gif" alt="@次视角中进行移动的中间结果图"><br>那我们的主视角是什么样的情况呢，接下来我们来看一下次视角对应的主视角盘子移动情况<br><img src="https://img1.imgtp.com/2023/08/27/TrZMAKdX.gif" alt="@主视角中进行移动的中间结果图"></p>
 </blockquote>
 <blockquote>
-<p><strong>看到这里我们相信你就明白了吧，每一次对抽象盒子进行拆解的时候，它们都会进入以抽象盒子为基础的次视角，但是我们从外部来看到的应该是没有拆解前的主视角的移动情况。所以啊，我们再看看一遍n=3的时候的运行图，来加强一下理解。我觉得最难的点在于我们人总是会惯性地从我们的主视角去看，而每一次拆解进入的时候是抽象盒子的次视角在执行A-&gt;B,A-&gt;C，B-&gt;C的迁移动作。这导致了我们看的很懵逼，越看越难理解。</strong><br><img src="https://img1.imgtp.com/2023/08/27/7RenKV1D.gif" alt="n=3"></p>
+<p><strong>看到这里我们相信你就明白了吧，每一次对抽象盘子进行拆解的时候，它们都会进入以抽象盘子为基础的次视角，但是我们从外部来看到的应该是没有拆解前的主视角的移动情况。所以啊，我们再看看一遍n=3的时候的运行图，来加强一下理解。我觉得最难的点在于我们人总是会惯性地从我们的主视角去看，而每一次拆解进入的时候是抽象盘子的次视角在执行A-&gt;B,A-&gt;C，B-&gt;C的迁移动作。这导致了我们看的很懵逼，越看越难理解。</strong><br><img src="https://img1.imgtp.com/2023/08/27/7RenKV1D.gif" alt="n=3"></p>
 </blockquote>
 <p>好了，思路到这里我们点到为止，大致的运行思路就是这样，关键在于主次视角的切换的理解，接下来我们将为什么用递归来实现汉诺塔</p>
 <h2><span id="wei-shi-me-yong-di-gui-suan-fa-shi-xian">为什么用递归算法实现？</span><a href="#wei-shi-me-yong-di-gui-suan-fa-shi-xian" class="header-anchor">#</a></h2><blockquote>
@@ -1100,7 +1100,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">15.8k</span>&nbsp;字
+                class="white-color">15.9k</span>&nbsp;字
             
             
             
