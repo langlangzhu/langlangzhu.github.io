@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="浪浪猪">
+    <meta name="keywords" content="汉诺塔(hanio tower)递归实现的原理思考, 浪浪猪">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>浪浪猪</title>
+    <title>汉诺塔(hanio tower)递归实现的原理思考 | 浪浪猪</title>
     <link rel="icon" type="image/png" href="/favicon1.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -250,12 +250,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/0.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/11.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title"></h1>
+                    <h1 class="description center-align post-title">汉诺塔(hanio tower)递归实现的原理思考</h1>
                 </div>
             </div>
         </div>
@@ -369,9 +369,13 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">
+                                <span class="chip bg-color">数据结构</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
@@ -424,8 +428,7 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <hr>
-<h1><span id="han-nuo-ta-hanio-tower-di-gui-shi-xian-de-yuan-li-si-kao">汉诺塔(hanio tower)递归实现的原理思考</span><a href="#han-nuo-ta-hanio-tower-di-gui-shi-xian-de-yuan-li-si-kao" class="header-anchor">#</a></h1><h2><span id="qian-yan">前言</span><a href="#qian-yan" class="header-anchor">#</a></h2><blockquote>
+                <h1><span id="han-nuo-ta-hanio-tower-di-gui-shi-xian-de-yuan-li-si-kao">汉诺塔(hanio tower)递归实现的原理思考</span><a href="#han-nuo-ta-hanio-tower-di-gui-shi-xian-de-yuan-li-si-kao" class="header-anchor">#</a></h1><h2><span id="qian-yan">前言</span><a href="#qian-yan" class="header-anchor">#</a></h2><blockquote>
 <p>昨天我是先看的汉诺塔理论上的实现原理，看完之后感觉还行，这不是挺简单的嘛。但是理论总归要去实际操作去实现的嘛。于是我就去看了汉诺塔的代码实现方法，看了之后说实话我有点懵逼.WTF？？？？？这么神奇？？就几句话就搞定啦？？凭什么递归就可以去实现汉诺塔?递归和汉诺塔实现原理的共性是什么，以至于递归就可以完美实现汉诺塔？？这些疑问困扰着我。然后我就去搜集有关的视频和文章，结果就是…我还是没理解真正的原理..很多博主的讲解普遍集中在将汉诺塔去一步一步实现了一遍，没有明确提到为什么选择递归算法就可以完美实现汉诺塔。后来，我通过对这些博主讲解的信息进行综合分析，总算有了一点小小的理解。下面我就来分享一下我的个人理解。</p>
 </blockquote>
 <h2><span id="han-nuo-ta-jie-shao">汉诺塔介绍</span><a href="#han-nuo-ta-jie-shao" class="header-anchor">#</a></h2><blockquote>
@@ -470,7 +473,7 @@
 <h4><span id="di-yi-bu-chai-jie">第一步拆解</span><a href="#di-yi-bu-chai-jie" class="header-anchor">#</a></h4><blockquote>
 <p>我们知道n=2的时候，程序的运行步骤是先从A-&gt;B将(n-1)部分的盘子移动到B柱寄存，然后执行A-&gt;C，将最底下标号为n的盘子移动到C，最后执行B-&gt;C将寄存在B柱子的(n-1)个柱子移动到C柱子。那我们分析n=3的时候我们就可以将下图蓝色盘子上方的盘子（图中阴影部分）抽象成一个整体，那我们要求的n=3，3个盘子的转移问题就变成了n=2转移两个盘子的问题。</p>
 </blockquote>
-<p><img src="https://img1.imgtp.com/2023/08/27/o63KqaR9.png" alt="@抽象前 | left| 200×0"><br><img src="https://img1.imgtp.com/2023/08/27/Ks1MaTNd.png" alt="@抽象后 | right| 200×0"></p>
+<p><img src="https://img1.imgtp.com/2023/08/27/o63KqaR9.png" alt="@抽象前 "><br><img src="https://img1.imgtp.com/2023/08/27/Ks1MaTNd.png" alt="@抽象后"></p>
 <blockquote>
 <p>接下来我们将抽象后的盘子进行转移，按照n=2的转移办法，粉色的盘子会被投放到B柱子上，然后蓝色的盘子将会被投放到C柱子上。(状态图如下图)<br><img src="https://img1.imgtp.com/2023/08/27/AVIQpxBA.png" alt="@状态图"><br>到了这个状态之后，按照转移的顺序，我们应该把粉色的盘子转移到C柱就可以完成认为了。但是！我们这个粉色的盘子是我们抽象出来的，它内部还有俩盘子呢：所以我们要对着两个盘子再次进行分析。</p>
 <blockquote>
@@ -618,7 +621,11 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
+                            
+                                <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">
+                                    <span class="chip bg-color">数据结构</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -795,9 +802,9 @@
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/0.jpg" class="responsive-img" alt="">
+                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="汉诺塔(hanio tower)递归实现的原理思考">
                         
-                        <span class="card-title"></span>
+                        <span class="card-title">汉诺塔(hanio tower)递归实现的原理思考</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -819,6 +826,14 @@
                     </div>
                 </div>
 
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">
+                        <span class="chip bg-color">数据结构</span>
+                    </a>
+                    
+                </div>
                 
             </div>
         </div>
