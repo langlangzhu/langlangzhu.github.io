@@ -394,14 +394,14 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2023-08-27
+                    2023-08-28
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    3.3k
+                    3.4k
                 </div>
                 
 
@@ -466,7 +466,7 @@
 </blockquote>
 <hr>
 <blockquote>
-<p>怎么样？看完了n=3的动图演示，是不是感觉一脸懵逼？？？(反正我昨天是这样的qwq)。话不多说，我就来一步一步拆解一下n=3的运行机理。在这之前呢，我们要明确一下我们在n=2的时候得出的结论：<strong>先A-&gt;B，然后A-&gt;C，最后B-&gt;C。这个法则将贯穿全文，无论是n的值为多少</strong></p>
+<p>怎么样？看完了n=3的动图演示，是不是感觉一脸懵逼？？？(反正我昨天是这样的qwq)。话不多说，我就来一步一步拆解一下n=3的运行机理。在这之前呢，我们要明确一下我们在n=2的时候得出的结论：<strong>先A-&gt;B，然后A-&gt;C，最后B-&gt;C。这个法则将贯穿全文，无论n的值为多少</strong></p>
 </blockquote>
 <hr>
 <h3><span id="yuan-li-fen-xi">原理分析</span><a href="#yuan-li-fen-xi" class="header-anchor">#</a></h3><p><strong>这里我提前说明一下，我定义最左边的柱子为A，中间的柱子为B，最右边的柱子为C</strong></p>
@@ -538,10 +538,14 @@
 <p>当我们执行抽象化盘子从B柱子-&gt;柱子C的时候</p>
 <pre class="line-numbers language-cpp"><code class="language-cpp"><span class="token function">hanoi</span><span class="token punctuation">(</span>y<span class="token punctuation">,</span>x<span class="token punctuation">,</span>z<span class="token punctuation">,</span>n<span class="token number">-1</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//最底下的盘子我们已经在上面移动到了C柱子，接下来我们把暂存在B柱子的盘子移动到C柱子就好了，这段代码就是实现这个功能</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>程序通过递归下一次会进入下段的代码：</p>
-<pre class="line-numbers language-cpp"><code class="language-cpp"> <span class="token function">hanoi</span><span class="token punctuation">(</span>x<span class="token punctuation">,</span>z<span class="token punctuation">,</span>y<span class="token punctuation">,</span>n<span class="token number">-1</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//抽象化盘子将A->B柱子</span>
+<p>程序通过递归下一次会进入A-&gt;B柱的代码：</p>
+<pre class="line-numbers language-cpp"><code class="language-cpp"><span class="token function">hanoi</span><span class="token punctuation">(</span>x<span class="token punctuation">,</span>z<span class="token punctuation">,</span>y<span class="token punctuation">,</span>n<span class="token number">-1</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//抽象化盘子将A->B柱子</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p><strong>发现没有？从B-&gt;C的代码的A(x)柱子是B柱子(y)记的,C柱子依旧是z字母在标记，结果进入下一次递归A-&gt;B的代码，我们可以看的此时的A柱子(x)变成B柱子(y),而C柱子变成了A柱子(x)。也就是说程序自动进入了抽象盘子的次视角。这就是递归在内部运行的汉诺塔的运行机理！！</strong></p>
+<p>**发现没有？这里有一个主次视角的转换。我来举个例子好了比如我们先执行hanoi(y,x,z,n-1); 这里y=B,x=A，z=C，代入可以得到hanoi(B,A,C,n-1);，接着执行hanoi(x,z,y,n-1); 这里我们将刚刚函数读入的x，y，z对应填入这个函数，可以得到hanoi(A,,C,B,n-1); 文字有点不好描述，请看下面的动图演示：(还是以n=3进入n=2的数据作为例子)</p>
+<p><img src="https://img1.imgtp.com/2023/08/28/RUvp66U4.gif" alt="n=3进入n=2,n=2的视角"></p>
+<p>所以我们从n=3的主视角看到的就是如下的运动情况：</p>
+<p><img src="https://img1.imgtp.com/2023/08/27/7RenKV1D.gif" alt="n=3的主视角运动情况"></p>
+<p><strong>看到没有！！主视角的黄色盘子第一步移动就去了C盘子，C盘子就对应了次视角的B盘子</strong></p>
 </blockquote>
 <hr>
 <blockquote>
@@ -1100,7 +1104,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">15.9k</span>&nbsp;字
+                class="white-color">16k</span>&nbsp;字
             
             
             
