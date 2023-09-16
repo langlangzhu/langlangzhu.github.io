@@ -405,14 +405,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    2.6k
+                    2.8k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    10 分
+                    11 分
                 </div>
                 
 
@@ -681,6 +681,15 @@ vector<span class="token operator">&lt;</span>string<span class="token operator"
 cout<span class="token operator">&lt;&lt;</span>ans<span class="token punctuation">;</span>
 <span class="token punctuation">}</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<blockquote>
+<p>这里我非常有必要解释一下为什么prior[store[i].id]= prior[store[i].id]-(store[i].ts-locate[store[i].id]) +1;这段代码要+1。我们知道这段代码的功能其实是想要求出两段时间相差了多少，比如6-9中间相差了2个数字，我们直接9-6求出来是等于3的，这个3其中也把9算了进去，但是由于我们到达9的时候是要加优先级的，所以我们要把多减掉的一位给它加回来 </p>
+<blockquote>
+<p>图解：</p>
+<blockquote>
+<p><img src="https://img1.imgtp.com/2023/09/16/jSuykp4O.png"></p>
+</blockquote>
+</blockquote>
+</blockquote>
 
                 
             </div>
@@ -1231,7 +1240,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">18.6k</span>&nbsp;字
+                class="white-color">18.7k</span>&nbsp;字
             
             
             
