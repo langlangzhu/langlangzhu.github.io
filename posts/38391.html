@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="链表题实战, 浪浪猪">
+    <meta name="keywords" content="上架视频, 浪浪猪">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>链表题实战 | 浪浪猪</title>
+    <title>上架视频 | 浪浪猪</title>
     <link rel="icon" type="image/png" href="/favicon1.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -250,12 +250,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/16.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/15.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">链表题实战</h1>
+                    <h1 class="description center-align post-title">上架视频</h1>
                 </div>
             </div>
         </div>
@@ -369,13 +369,9 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                    <div class="article-tag">
-                        
-                            <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">
-                                <span class="chip bg-color">数据结构</span>
-                            </a>
-                        
-                    </div>
+                          <div class="article-tag">
+                            <span class="chip bg-color">无标签</span>
+                          </div>
                     
                 </div>
                 <div class="col s5 right-align">
@@ -387,28 +383,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2023-08-25
+                    2023-10-21
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2023-08-25
+                    2023-10-21
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.8k
+                    64
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    7 分
+                    1 分
                 </div>
                 
 
@@ -428,194 +424,8 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1><span id="lian-biao-shi-zhan">链表实战</span><a href="#lian-biao-shi-zhan" class="header-anchor">#</a></h1><h2><span id="ti-mu-miao-shu">题目描述</span><a href="#ti-mu-miao-shu" class="header-anchor">#</a></h2><blockquote>
-<p>有 n 辆自行车依次来到停车棚，除了第一辆自行车外，每辆自行车都会恰好停放在已经在停车棚里的某辆自行车的左边或右边。(e.g.停车棚里已经有 3 辆自行车，从左到右编号为:3,5,1。现在编号为 2 的第 4 辆自行车要停在 5 号自行车的左边，所以现在停车棚里的自行车编号是：3，2，5，1）。给定n辆自行车的停放情况，按顺序输出最后停车棚里的自行车编号。n≤100000。</p>
-</blockquote>
-<blockquote>
-<p><strong>输入描述</strong></p>
-<blockquote>
-<p>第一行一个整数 n。 第二行一个整数x。表示第一辆自行车的编号。 以下 n−1 行，每行<br>3 个整数 x,y,z。 z=0 时，表示编号为 x 的自行车恰停放在编号为 y 的自行车的左边。 z=1 时，表示编号为 x 的自行车恰停放在编号为 y 的自行车的右边。</p>
-</blockquote>
-</blockquote>
-<blockquote>
-<p><strong>输出描述</strong></p>
-<blockquote>
-<p>从左到右输出停车棚里的自行车编号</p>
-</blockquote>
-</blockquote>
-<blockquote>
-<p><strong>输入样例</strong></p>
-<blockquote>
-<pre><code>        4
-    3
-  1 3 1
-  2 1 0
-  5 2 1
-</code></pre>
-</blockquote>
-</blockquote>
-<blockquote>
-<p><strong>输出样例</strong></p>
-<blockquote>
-<pre><code>3 2 5 1
-</code></pre>
-</blockquote>
-</blockquote>
-<h2><span id="si-lu">思路</span><a href="#si-lu" class="header-anchor">#</a></h2><h3><span id="jing-tai-lian-biao-shi-xian-si-lu">静态链表实现思路</span><a href="#jing-tai-lian-biao-shi-xian-si-lu" class="header-anchor">#</a></h3><blockquote>
-<p><strong>①：先初始化下标为0,1的链表结点。</strong><br><strong>如图</strong>   <img src="https://img1.imgtp.com/2023/08/25/BsOFIdEf.jpg" alt="初始化示意图"></p>
-</blockquote>
-<blockquote>
-<p><strong>②：接下来我们从下标为2的链表结点开始，先将第一辆自行车插入结点0和结点1之间。之后保持结点0，1不动，结点0，1仅仅用于判别左右方向边界。</strong><br><img src="https://img1.imgtp.com/2023/08/25/hldOBjyF.jpg" alt="链表插入示意图"><br><strong>③：由于链表在插入的时候需要一个一个遍历过去，它的时间复杂度是O(n)，n题目说是≤100000 。当n过大时，容易引起程序运行超时。所以我们引进一个located[N]定位数组，用于定位每个自行车的位置。这样我们就可以根据自行车的名字直接定位到其结点位置进行插入操作，无需进行遍历查找。</strong><br><strong>④：结合以上三点，我们就可以实现对本题的代码实现</strong></p>
-</blockquote>
-<h2><span id="he-xin-dai-ma">核心代码</span><a href="#he-xin-dai-ma" class="header-anchor">#</a></h2><blockquote>
-<p>创建链表</p>
-</blockquote>
-<pre class="line-numbers language-cpp"><code class="language-cpp"><span class="token keyword">struct</span> Node
-<span class="token punctuation">{</span>
-  <span class="token keyword">int</span> p<span class="token punctuation">;</span><span class="token comment" spellcheck="true">//存储上一个结点</span>
-  <span class="token keyword">int</span> N<span class="token punctuation">;</span><span class="token comment" spellcheck="true">//存储下一个结点</span>
-  <span class="token keyword">int</span> data<span class="token punctuation">;</span><span class="token comment" spellcheck="true">//存储自行车的编号</span>
-<span class="token punctuation">}</span>Node<span class="token punctuation">[</span>N<span class="token punctuation">]</span><span class="token punctuation">;</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<blockquote>
-<p>创建一个locate数组用于存储自行车摆放的结点位置，便于快速定位</p>
-</blockquote>
-<pre class="line-numbers language-cpp"><code class="language-cpp"><span class="token keyword">int</span> locate<span class="token punctuation">[</span>N<span class="token punctuation">]</span><span class="token punctuation">;</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<blockquote>
-<p>编写一个初始化函数，设置链表结点0，1作为左右方向的边界</p>
-</blockquote>
-<pre class="line-numbers language-cpp"><code class="language-cpp"><span class="token keyword">void</span> <span class="token function">init</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
-<span class="token punctuation">{</span> Node<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span>N<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">;</span>
-   Node<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">.</span>p<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>
-   now<span class="token operator">=</span><span class="token number">2</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span><span class="token comment" spellcheck="true">//对应本文上面思路段落的第一张图片</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<blockquote>
-<p><strong>编写插入数据的自定义函数，用图片来描述的话，就是对应本文思路部分的第二张图片，本节的代码部分理解最好对着图片去模拟，那样会好理解一点。</strong></p>
-</blockquote>
-<pre class="line-numbers language-cpp"><code class="language-cpp"><span class="token keyword">void</span> <span class="token function">insert</span><span class="token punctuation">(</span><span class="token keyword">int</span> k<span class="token punctuation">,</span><span class="token keyword">int</span> a<span class="token punctuation">)</span><span class="token comment" spellcheck="true">//变量k是提供位置信息，例如x要插入到y的左边，那这个k就代表了y的位置信息。而变量a则提供新插入的自行车的编号</span>
-<span class="token punctuation">{</span> Node<span class="token punctuation">[</span>now<span class="token punctuation">]</span><span class="token punctuation">.</span>data<span class="token operator">=</span>a<span class="token punctuation">;</span><span class="token comment" spellcheck="true">//将新自行车的编号插入新结点的数据部分</span>
- locate<span class="token punctuation">[</span>a<span class="token punctuation">]</span><span class="token operator">=</span>now<span class="token punctuation">;</span><span class="token comment" spellcheck="true">//将新的自行车结点的下标存储在locate数组，便于快速查找</span>
- Node<span class="token punctuation">[</span>now<span class="token punctuation">]</span><span class="token punctuation">.</span>N<span class="token operator">=</span>Node<span class="token punctuation">[</span>k<span class="token punctuation">]</span><span class="token punctuation">.</span>N<span class="token punctuation">;</span><span class="token comment" spellcheck="true">//将新结点的N（next）指向新结点右边的结点</span>
- Node<span class="token punctuation">[</span>Node<span class="token punctuation">[</span>k<span class="token punctuation">]</span><span class="token punctuation">.</span>N<span class="token punctuation">]</span><span class="token punctuation">.</span>p<span class="token operator">=</span>now<span class="token punctuation">;</span><span class="token comment" spellcheck="true">//将刚刚新节点的N指向的右边结点重新指回新结点，以构成双向链表，方便结点左右方向的任意插入</span>
- Node<span class="token punctuation">[</span>k<span class="token punctuation">]</span><span class="token punctuation">.</span>N<span class="token operator">=</span>now<span class="token punctuation">;</span><span class="token comment" spellcheck="true">//将属于新节点左边的结点指向新结点</span>
- Node<span class="token punctuation">[</span>now<span class="token punctuation">]</span><span class="token punctuation">.</span>p<span class="token operator">=</span>k<span class="token punctuation">;</span><span class="token comment" spellcheck="true">//新节点的P（preid）指向其左结点。</span>
- now<span class="token operator">++</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//结点位置+1，便于下一个新结点的创建。</span>
-<span class="token punctuation">}</span><span class="token comment" spellcheck="true">//这个代码需要结合思路部分的第二张图片去理解更佳</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<blockquote>
-<p><strong>对于左右插入顺序的执行，在插入函数中最后的实现其实是偏右边的，比如k=0，那我们新的结点插入的位置是在0结点的右边的。右边插入我们解决了，接下来我们按照相对性的普遍规律，我们输入k=-1结点(这只是假设，假设0结点前面有一个-1结点)，那结点就会插入到-1结点的右边，这不就相当于在结点0的左边嘛。这样我们左边插入和右边插入的问题就迎刃而解了</strong></p>
-</blockquote>
-<pre class="line-numbers language-cpp"><code class="language-cpp"> <span class="token keyword">if</span><span class="token punctuation">(</span>z<span class="token operator">==</span><span class="token number">0</span><span class="token punctuation">)</span>
-      <span class="token punctuation">{</span>
-        <span class="token function">insert</span><span class="token punctuation">(</span>Node<span class="token punctuation">[</span>locate<span class="token punctuation">[</span>y<span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">.</span>p<span class="token punctuation">,</span>x<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//插入到y的左边</span>
-      <span class="token punctuation">}</span>
-
-    <span class="token keyword">else</span>
-       <span class="token punctuation">{</span>
-           <span class="token function">insert</span><span class="token punctuation">(</span>locate<span class="token punctuation">[</span>y<span class="token punctuation">]</span><span class="token punctuation">,</span>x<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//插入到y的右边</span>
-
-       <span class="token punctuation">}</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h2><span id="yuan-dai-ma">源代码</span><a href="#yuan-dai-ma" class="header-anchor">#</a></h2><pre class="line-numbers language-cpp"><code class="language-cpp"><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;iostream></span></span>
-<span class="token keyword">using</span> <span class="token keyword">namespace</span> std<span class="token punctuation">;</span>
-<span class="token keyword">const</span> <span class="token keyword">int</span> N<span class="token operator">=</span><span class="token number">120000</span><span class="token punctuation">;</span>
-<span class="token keyword">int</span> now<span class="token punctuation">;</span>
-<span class="token keyword">struct</span> Node
-<span class="token punctuation">{</span>
-  <span class="token keyword">int</span> p<span class="token punctuation">;</span>
-  <span class="token keyword">int</span> N<span class="token punctuation">;</span>
-  <span class="token keyword">int</span> data<span class="token punctuation">;</span>
-<span class="token punctuation">}</span>Node<span class="token punctuation">[</span>N<span class="token punctuation">]</span><span class="token punctuation">;</span>
-<span class="token keyword">int</span> locate<span class="token punctuation">[</span>N<span class="token punctuation">]</span><span class="token punctuation">;</span>
-<span class="token keyword">void</span> <span class="token function">init</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
-<span class="token punctuation">{</span> Node<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span>N<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">;</span>
-   Node<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">.</span>p<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">;</span>
-   now<span class="token operator">=</span><span class="token number">2</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-
-<span class="token keyword">void</span> <span class="token function">insert</span><span class="token punctuation">(</span><span class="token keyword">int</span> k<span class="token punctuation">,</span><span class="token keyword">int</span> a<span class="token punctuation">)</span>
-<span class="token punctuation">{</span> Node<span class="token punctuation">[</span>now<span class="token punctuation">]</span><span class="token punctuation">.</span>data<span class="token operator">=</span>a<span class="token punctuation">;</span>
- locate<span class="token punctuation">[</span>a<span class="token punctuation">]</span><span class="token operator">=</span>now<span class="token punctuation">;</span>
- Node<span class="token punctuation">[</span>now<span class="token punctuation">]</span><span class="token punctuation">.</span>N<span class="token operator">=</span>Node<span class="token punctuation">[</span>k<span class="token punctuation">]</span><span class="token punctuation">.</span>N<span class="token punctuation">;</span>
- Node<span class="token punctuation">[</span>Node<span class="token punctuation">[</span>k<span class="token punctuation">]</span><span class="token punctuation">.</span>N<span class="token punctuation">]</span><span class="token punctuation">.</span>p<span class="token operator">=</span>now<span class="token punctuation">;</span>
- Node<span class="token punctuation">[</span>k<span class="token punctuation">]</span><span class="token punctuation">.</span>N<span class="token operator">=</span>now<span class="token punctuation">;</span>
- Node<span class="token punctuation">[</span>now<span class="token punctuation">]</span><span class="token punctuation">.</span>p<span class="token operator">=</span>k<span class="token punctuation">;</span>
- now<span class="token operator">++</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-
-
-
-<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
-<span class="token punctuation">{</span>
-  <span class="token keyword">int</span> n<span class="token punctuation">,</span>x<span class="token punctuation">,</span>y<span class="token punctuation">,</span>z<span class="token punctuation">;</span>
-  cin<span class="token operator">>></span>n<span class="token punctuation">;</span>
-  <span class="token keyword">int</span> a<span class="token punctuation">;</span>
-  cin<span class="token operator">>></span>a<span class="token punctuation">;</span>
-  <span class="token function">init</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-  <span class="token function">insert</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span>a<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//将第一辆自行车插入数据</span>
-  n<span class="token operator">--</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//第一辆插入了之后总数量要减1</span>
-  <span class="token keyword">while</span><span class="token punctuation">(</span>n<span class="token operator">--</span><span class="token punctuation">)</span>
-   <span class="token punctuation">{</span>
-      cin<span class="token operator">>></span>x<span class="token operator">>></span>y<span class="token operator">>></span>z<span class="token punctuation">;</span>
-      <span class="token keyword">if</span><span class="token punctuation">(</span>z<span class="token operator">==</span><span class="token number">0</span><span class="token punctuation">)</span>
-      <span class="token punctuation">{</span>
-        <span class="token function">insert</span><span class="token punctuation">(</span>Node<span class="token punctuation">[</span>locate<span class="token punctuation">[</span>y<span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">.</span>p<span class="token punctuation">,</span>x<span class="token punctuation">)</span><span class="token punctuation">;</span>
-      <span class="token punctuation">}</span>
-
-    <span class="token keyword">else</span>
-       <span class="token punctuation">{</span>
-           <span class="token function">insert</span><span class="token punctuation">(</span>locate<span class="token punctuation">[</span>y<span class="token punctuation">]</span><span class="token punctuation">,</span>x<span class="token punctuation">)</span><span class="token punctuation">;</span>
-
-       <span class="token punctuation">}</span>
-
-   <span class="token punctuation">}</span>
-
-   <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i<span class="token operator">=</span>Node<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span>N<span class="token punctuation">;</span>i<span class="token operator">!=</span><span class="token number">1</span><span class="token punctuation">;</span>i<span class="token operator">=</span>Node<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">.</span>N<span class="token punctuation">)</span>
-     <span class="token punctuation">{</span>
-       cout<span class="token operator">&lt;&lt;</span>Node<span class="token punctuation">[</span>i<span class="token punctuation">]</span><span class="token punctuation">.</span>data<span class="token operator">&lt;&lt;</span><span class="token string">" "</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//将结点的数据依次输出</span>
-     <span class="token punctuation">}</span>
-
-  <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h3><span id="c-stl-lian-biao-rong-qi-shi-xian-yuan-dai-ma">C++STL 链表容器实现源代码</span><a href="#c-stl-lian-biao-rong-qi-shi-xian-yuan-dai-ma" class="header-anchor">#</a></h3><pre class="line-numbers language-cpp"><code class="language-cpp"><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;bits/stdc++.h></span></span>
-<span class="token keyword">using</span> <span class="token keyword">namespace</span> std<span class="token punctuation">;</span>
-<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span>
-<span class="token punctuation">{</span> <span class="token keyword">int</span> n<span class="token punctuation">,</span>x<span class="token punctuation">,</span>y<span class="token punctuation">,</span>z<span class="token punctuation">,</span>a<span class="token punctuation">;</span>
-    list<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">></span><span class="token operator">::</span>iterator locate<span class="token punctuation">[</span><span class="token number">200000</span><span class="token punctuation">]</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//用于定位自行车对应的结点位置</span>
-    list<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">></span> Node<span class="token punctuation">;</span>
-    list<span class="token operator">&lt;</span><span class="token keyword">int</span><span class="token operator">></span><span class="token operator">::</span>iterator temp<span class="token punctuation">;</span><span class="token comment" spellcheck="true">//迭代器，只访问物体的外部信息，而不访问内部信息，可以看作指针，指针是迭代器的一种</span>
-    cin<span class="token operator">>></span>n<span class="token operator">>></span>a<span class="token punctuation">;</span><span class="token comment" spellcheck="true">//a是第一类自行车的编号，n是总共的自行车数量</span>
-    Node<span class="token punctuation">.</span><span class="token function">push_back</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//将第一辆自行车的数据存入链表结点</span>
-    locate<span class="token punctuation">[</span>a<span class="token punctuation">]</span><span class="token operator">=</span>Node<span class="token punctuation">.</span><span class="token function">begin</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//将第一辆自行车的结点的位置信息存到locate 迭代器中，因为list容器访问的时候只能通过自增去一个一个查询，而不可以直接通过下标去访问。那样太慢了，我们直接通过存自行车编号对应的迭代器，可以直接定位到具体的结点位置，提高运行效率</span>
-    <span class="token keyword">for</span><span class="token punctuation">(</span><span class="token keyword">int</span> i<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">;</span>i<span class="token operator">&lt;=</span>n<span class="token number">-1</span><span class="token punctuation">;</span>i<span class="token operator">++</span><span class="token punctuation">)</span>
-    <span class="token punctuation">{</span> cin<span class="token operator">>></span>x<span class="token operator">>></span>y<span class="token operator">>></span>z<span class="token punctuation">;</span>
-
-        <span class="token keyword">if</span><span class="token punctuation">(</span>z<span class="token operator">==</span><span class="token number">0</span><span class="token punctuation">)</span>
-        <span class="token punctuation">{</span>  Node<span class="token punctuation">.</span><span class="token function">insert</span><span class="token punctuation">(</span>locate<span class="token punctuation">[</span>y<span class="token punctuation">]</span><span class="token punctuation">,</span>x<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//将编号x的自行车插到y编号自行车的左边</span>
-            temp<span class="token operator">=</span>locate<span class="token punctuation">[</span>y<span class="token punctuation">]</span><span class="token punctuation">;</span>   <span class="token comment" spellcheck="true">//存储y编号自行车的位置</span>
-            locate<span class="token punctuation">[</span>x<span class="token punctuation">]</span><span class="token operator">=</span><span class="token operator">--</span>temp<span class="token punctuation">;</span> <span class="token comment" spellcheck="true">//temp位置是对应y自行车的，现在x编号的自行车已经在y自行车的前面了，所以只要将temp自减1，就是x对应的位置信息了</span>
-        <span class="token punctuation">}</span>
-        <span class="token keyword">else</span>
-        <span class="token punctuation">{</span> Node<span class="token punctuation">.</span><span class="token function">insert</span><span class="token punctuation">(</span><span class="token operator">++</span>locate<span class="token punctuation">[</span>y<span class="token punctuation">]</span><span class="token punctuation">,</span>x<span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//将编号x的自行车插到y编号自行车的右边</span>
-            temp<span class="token operator">=</span>locate<span class="token punctuation">[</span>y<span class="token punctuation">]</span><span class="token punctuation">;</span>
-            locate<span class="token punctuation">[</span>x<span class="token punctuation">]</span><span class="token operator">=</span><span class="token operator">--</span>temp<span class="token punctuation">;</span>
-        <span class="token punctuation">}</span>
-    <span class="token punctuation">}</span>
-    temp<span class="token operator">=</span>Node<span class="token punctuation">.</span><span class="token function">begin</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
-  <span class="token keyword">for</span><span class="token punctuation">(</span>temp<span class="token punctuation">;</span>temp<span class="token operator">!=</span>Node<span class="token punctuation">.</span><span class="token function">end</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token operator">++</span>temp<span class="token punctuation">)</span><span class="token comment" spellcheck="true">//通过迭代器遍历输出结果</span>
-  <span class="token punctuation">{</span>
-      cout<span class="token operator">&lt;&lt;</span><span class="token operator">*</span>temp<span class="token operator">&lt;&lt;</span><span class="token string">" "</span><span class="token punctuation">;</span>
-  <span class="token punctuation">}</span>
-
-    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
-<span class="token punctuation">}</span>
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h2><span id="zong-jie">总结</span><a href="#zong-jie" class="header-anchor">#</a></h2><blockquote>
-<p><strong>通过一locate数组/list迭代器 来存储位置信息，通过空间换时间可以用来解决链表遍历过慢的问题。本题核心的点在于利用双向链表，通过物体相对的位置关系去实现了左边插入和右边插入。</strong></p>
-</blockquote>
+                <h1><span id="ke-cheng-shang-jia-shi-pin">课程上架视频</span><a href="#ke-cheng-shang-jia-shi-pin" class="header-anchor">#</a></h1><p><video controls preload="auto" width="100%" poster data-setup="{&quot;aspectRatio&quot;:&quot;16:9&quot;}"><source src="https://pan.axianyu.cn/f/GkxS2/shangjia.mp4" type="video/mp4"><object data="1" width="100%"><embed src="1" width="100%"><p class="vjs-no-js">如果你无法看到该视频,那么可能你的电脑不支持该文件格式。</p></object></video></p>
+<h1><span id="ke-cheng-xiao-ke-shi-pin">课程消课视频</span><a href="#ke-cheng-xiao-ke-shi-pin" class="header-anchor">#</a></h1><p><video controls preload="auto" width="100%" poster data-setup="{&quot;aspectRatio&quot;:&quot;16:9&quot;}"><source src="https://pan.axianyu.cn/f/YPLSg/%E6%B6%88%E8%AF%BE%E8%A7%86%E9%A2%91.mp4" type="video/mp4"><object data="1" width="100%"><embed src="1" width="100%"><p class="vjs-no-js">如果你无法看到该视频,那么可能你的电脑不支持该文件格式。</p></object></video></p>
 
                 
             </div>
@@ -642,7 +452,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://langlangzhu.top/2023/08/25/%E9%93%BE%E8%A1%A8%E5%AE%9E%E6%88%98/">http://langlangzhu.top/2023/08/25/%E9%93%BE%E8%A1%A8%E5%AE%9E%E6%88%98/</a>
+                    <a href="http://langlangzhu.top/posts/38391.html">http://langlangzhu.top/posts/38391.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -679,11 +489,7 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            
-                                <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">
-                                    <span class="chip bg-color">数据结构</span>
-                                </a>
-                            
+                            <span class="chip bg-color">无标签</span>
                         </div>
                     
                 </div>
@@ -851,62 +657,18 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2023/08/27/%E6%B1%89%E8%AF%BA%E5%A1%94(hanio%20tower)%E9%80%92%E5%BD%92%E5%AE%9E%E7%8E%B0%E7%9A%84%E5%8E%9F%E7%90%86%E6%80%9D%E8%80%83/">
+                <a href="/posts/38391.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/11.jpg" class="responsive-img" alt="汉诺塔(hanio tower)递归实现的原理思考">
+                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="上架视频">
                         
-                        <span class="card-title">汉诺塔(hanio tower)递归实现的原理思考</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            
-                        
-                    </div>
-                    <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2023-08-27
-                        </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-user fa-fw"></i>
-                            浪浪猪
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">
-                        <span class="chip bg-color">数据结构</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/2023/08/23/%E5%A4%A7%E6%95%B0%E7%9B%B8%E5%8A%A0%E9%97%AE%E9%A2%98/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="大数求阶乘/相加问题">
-                        
-                        <span class="card-title">大数求阶乘/相加问题</span>
+                        <span class="card-title">上架视频</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -917,7 +679,45 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2023-08-23
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-10-21
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            浪浪猪
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/posts/59949.html">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="Shell学习笔记">
+                        
+                        <span class="card-title">Shell学习笔记</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            Here's something encrypted, password is required to continue reading.
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-09-21
                             </span>
                         <span class="publish-author">
                             
@@ -930,12 +730,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF/">
-                        <span class="chip bg-color">蓝桥杯</span>
-                    </a>
-                    
-                    <a href="/tags/%E5%A4%A7%E6%95%B0%E8%BF%90%E7%AE%97/">
-                        <span class="chip bg-color">大数运算</span>
+                    <a href="/tags/Shell/">
+                        <span class="chip bg-color">Shell</span>
                     </a>
                     
                 </div>
