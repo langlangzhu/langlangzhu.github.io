@@ -394,7 +394,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2023-10-21
+                    2023-10-24
                 </div>
                 
 
@@ -440,7 +440,7 @@
 </blockquote>
 <blockquote>
 <hr>
-<p>我的总体讲解原则是，由简入繁。所以我们先从一片圆盘（n=1）开始讲起<br><img src="https://img1.imgtp.com/2023/08/27/9GS5fnYF.gif" alt="n=1时汉诺塔运行情况"></p>
+<p>我的总体讲解原则是，由简入繁。所以我们先从一片圆盘（n=1）开始讲起<br><img src="https://pan.axianyu.cn/f/61xTe/a5d34544a172b682ea3ed2193e684d92_MD5.gif" alt="n=1时汉诺塔运行情况"></p>
 <blockquote>
 <p><strong>图中我们可以看到当n=1的时候，我们是可以把A柱子移到C柱子达到目标，这个简单我提一嘴就一笔带过了</strong></p>
 </blockquote>
@@ -451,7 +451,7 @@
 </blockquote>
 <hr>
 <blockquote>
-<p><img src="https://img1.imgtp.com/2023/08/27/UMrA2XCP.gif" alt="n=2"></p>
+<p><img src="https://pan.axianyu.cn/f/VgxI2/541fd88369dbfe89ae98589e39bcbf96_MD5.gif" alt="n=2"></p>
 </blockquote>
 <blockquote>
 <p>由图中我们可以看出当A柱的总盘子数大于1的时候，要使从盘子原封不动从A柱移动到C柱子。且大盘子只能在小盘子下面，那我们只能先把上面的小盘子先暂时存到B柱作为过渡，然后我们就可以把A柱上的最大的盘子移动到C柱子，最后把B柱子上的小盘子移动到C柱子就可以了。我们通过总结这段运行过程可以发现：我们只要将n-1个盘子，(n代表最底下的盘子),一次性移动到B柱子上进行过渡，然后第n个盘子移动到C柱子就可以了，然后再把B柱上的盘子整体移动到C柱子就可以完成了。<strong>用更精简的语言来描述就是：先A-&gt;B，然后A-&gt;C，最后B-&gt;C</strong></p>
@@ -462,7 +462,7 @@
 </blockquote>
 <hr>
 <blockquote>
-<p><img src="https://img1.imgtp.com/2023/08/27/7RenKV1D.gif" alt="n=3"></p>
+<p><img src="https://pan.axianyu.cn/f/9gBi7/8b0abd59590d83cc55455b1e5fb45291_MD5.gif" alt="n=3"></p>
 </blockquote>
 <hr>
 <blockquote>
@@ -473,18 +473,18 @@
 <h4><span id="di-yi-bu-chai-jie">第一步拆解</span><a href="#di-yi-bu-chai-jie" class="header-anchor">#</a></h4><blockquote>
 <p>我们知道n=2的时候，程序的运行步骤是先从A-&gt;B将(n-1)部分的盘子移动到B柱寄存，然后执行A-&gt;C，将最底下标号为n的盘子移动到C，最后执行B-&gt;C将寄存在B柱子的(n-1)个柱子移动到C柱子。那我们分析n=3的时候我们就可以将下图蓝色盘子上方的盘子（图中阴影部分）抽象成一个整体，那我们要求的n=3，3个盘子的转移问题就变成了n=2转移两个盘子的问题。</p>
 </blockquote>
-<p><img src="https://img1.imgtp.com/2023/08/27/o63KqaR9.png" alt="@抽象前 "><br><img src="https://img1.imgtp.com/2023/08/27/Ks1MaTNd.png" alt="@抽象后"></p>
+<p><img src="https://pan.axianyu.cn/f/MrRt7/7009d8330a7c9964f9615ed2486fa24d_MD5.png" alt="@抽象前 "><br><img src="https://pan.axianyu.cn/f/JqPUM/2e48aec8daa121091a8b21cc8358fab8_MD5.png" alt="@抽象后"></p>
 <blockquote>
-<p>接下来我们将抽象后的盘子进行转移，按照n=2的转移办法，粉色的盘子会被投放到B柱子上，然后蓝色的盘子将会被投放到C柱子上。(状态图如下图)<br><img src="https://img1.imgtp.com/2023/08/27/AVIQpxBA.png" alt="@状态图"><br>到了这个状态之后，按照转移的顺序，我们应该把粉色的盘子转移到C柱就可以完成任务了。但是！我们这个粉色的盘子是我们抽象出来的，它内部还有俩盘子呢：所以我们要对着两个盘子再次进行分析。</p>
+<p>接下来我们将抽象后的盘子进行转移，按照n=2的转移办法，粉色的盘子会被投放到B柱子上，然后蓝色的盘子将会被投放到C柱子上。(状态图如下图)<br><img src="https://pan.axianyu.cn/f/o8GHO/424160929763221b3e374607490c0df5_MD5.png" alt="@状态图"><br>到了这个状态之后，按照转移的顺序，我们应该把粉色的盘子转移到C柱就可以完成任务了。但是！我们这个粉色的盘子是我们抽象出来的，它内部还有俩盘子呢：所以我们要对着两个盘子再次进行分析。</p>
 <blockquote>
-<p><img src="https://img1.imgtp.com/2023/08/27/mB8iVUkq.png" alt="@粉色盒子内部"></p>
+<p><img src="https://pan.axianyu.cn/f/d2bIN/1f8c641d918d029243c8332218bdacfd_MD5.png" alt="@粉色盒子内部"></p>
 </blockquote>
 </blockquote>
 <h4><span id="di-er-bu-chai-jie">第二步拆解</span><a href="#di-er-bu-chai-jie" class="header-anchor">#</a></h4><blockquote>
-<p><strong>由于第一步我们是将蓝色盘子上方的两个盘子抽象成了一个，我们程序执行的时候可不能整体移动，所以我们要对这个粉色的整体盘子再次进行拆解，根据第一步拆解的最后步骤我们可以看到，我们第二步拆解的时候，粉色盘子是位于B柱子的时候进来的，那个视角的参照物我们是基于粉色和蓝色盘子的视角(主视角)来看的。所以从那个视角来看，我们的粉色盘子是从B柱子进入第二步拆解。既然我们进入了第二步拆解，我们的视角参照物应该切换成基于黄色和绿色盘子的视角(次视角)，我们要从这个视角来重复执行A-&gt;B,A-&gt;C，B-&gt;C的步骤，但是这里要注意，我们最终的观察角度是通过主视角来看的，于是主视角所看到的B柱子其实对应的是次视角的C柱子：因为我们是从主视角的B柱子进入的次视角，在次视角中最后是要将盘子从A-&gt;C，随后返回给主视角，所以说次视角的C相当于主视角的B柱子，次视角的B相当于主视角的C柱子。接下来我们通过图片来加深一下理解</strong><br>如下图。<br><img src="https://img1.imgtp.com/2023/08/27/TMGmviqi.png" alt="@二次拆解后，次视角"><br>接下来我们来看一下次视角状态下盘子移动后的A-&gt;B，A-&gt;C的中间结果<br><img src="https://img1.imgtp.com/2023/08/27/ejF9lz1G.gif" alt="@次视角中进行移动的中间结果图"><br>那我们的主视角是什么样的情况呢，接下来我们来看一下次视角对应的主视角盘子移动情况<br><img src="https://img1.imgtp.com/2023/08/27/TrZMAKdX.gif" alt="@主视角中进行移动的中间结果图"></p>
+<p><strong>由于第一步我们是将蓝色盘子上方的两个盘子抽象成了一个，我们程序执行的时候可不能整体移动，所以我们要对这个粉色的整体盘子再次进行拆解，根据第一步拆解的最后步骤我们可以看到，我们第二步拆解的时候，粉色盘子是位于B柱子的时候进来的，那个视角的参照物我们是基于粉色和蓝色盘子的视角(主视角)来看的。所以从那个视角来看，我们的粉色盘子是从B柱子进入第二步拆解。既然我们进入了第二步拆解，我们的视角参照物应该切换成基于黄色和绿色盘子的视角(次视角)，我们要从这个视角来重复执行A-&gt;B,A-&gt;C，B-&gt;C的步骤，但是这里要注意，我们最终的观察角度是通过主视角来看的，于是主视角所看到的B柱子其实对应的是次视角的C柱子：因为我们是从主视角的B柱子进入的次视角，在次视角中最后是要将盘子从A-&gt;C，随后返回给主视角，所以说次视角的C相当于主视角的B柱子，次视角的B相当于主视角的C柱子。接下来我们通过图片来加深一下理解</strong><br>如下图。<br><img src="https://pan.axianyu.cn/f/g2Oik/55e4deb5b399344ff45f3af0a8545d79_MD5.png" alt="@二次拆解后，次视角"><br>接下来我们来看一下次视角状态下盘子移动后的A-&gt;B，A-&gt;C的中间结果<br><img src="https://pan.axianyu.cn/f/z8yFw/cf12c2dc331bb55d7393862df255877f_MD5.gif" alt="@次视角中进行移动的中间结果图"><br>那我们的主视角是什么样的情况呢，接下来我们来看一下次视角对应的主视角盘子移动情况<br><img src="https://pan.axianyu.cn/f/N3WIm/c2986e99806edf18057e79aab0be7192_MD5.gif" alt="@主视角中进行移动的中间结果图"></p>
 </blockquote>
 <blockquote>
-<p><strong>看到这里我们相信你就明白了吧，每一次对抽象盘子进行拆解的时候，它们都会进入以抽象盘子为基础的次视角，但是我们从外部来看到的应该是没有拆解前的主视角的移动情况。所以啊，我们再看看一遍n=3的时候的运行图，来加强一下理解。我觉得最难的点在于我们人总是会惯性地从我们的主视角去看，而每一次拆解进入的时候是抽象盘子的次视角在执行A-&gt;B,A-&gt;C，B-&gt;C的迁移动作。这导致了我们看的很懵逼，越看越难理解。</strong><br><img src="https://img1.imgtp.com/2023/08/27/7RenKV1D.gif" alt="n=3"></p>
+<p><strong>看到这里我们相信你就明白了吧，每一次对抽象盘子进行拆解的时候，它们都会进入以抽象盘子为基础的次视角，但是我们从外部来看到的应该是没有拆解前的主视角的移动情况。所以啊，我们再看看一遍n=3的时候的运行图，来加强一下理解。我觉得最难的点在于我们人总是会惯性地从我们的主视角去看，而每一次拆解进入的时候是抽象盘子的次视角在执行A-&gt;B,A-&gt;C，B-&gt;C的迁移动作。这导致了我们看的很懵逼，越看越难理解。</strong><br><img src="https://pan.axianyu.cn/f/9gBi7/8b0abd59590d83cc55455b1e5fb45291_MD5.gif" alt="n=3"></p>
 </blockquote>
 <p>好了，思路到这里我们点到为止，大致的运行思路就是这样，关键在于主次视角的切换的理解，接下来我们将为什么用递归来实现汉诺塔</p>
 <h2><span id="wei-shi-me-yong-di-gui-suan-fa-shi-xian">为什么用递归算法实现？</span><a href="#wei-shi-me-yong-di-gui-suan-fa-shi-xian" class="header-anchor">#</a></h2><blockquote>
@@ -542,9 +542,9 @@
 <pre class="line-numbers language-cpp"><code class="language-cpp"><span class="token function">hanoi</span><span class="token punctuation">(</span>x<span class="token punctuation">,</span>z<span class="token punctuation">,</span>y<span class="token punctuation">,</span>n<span class="token number">-1</span><span class="token punctuation">)</span><span class="token punctuation">;</span><span class="token comment" spellcheck="true">//抽象化盘子将A->B柱子</span>
 <span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>**发现没有？这里有一个主次视角的转换。我来举个例子好了比如我们先执行hanoi(y,x,z,n-1); 这里y=B,x=A，z=C，代入可以得到hanoi(B,A,C,n-1);，接着执行hanoi(x,z,y,n-1); 这里我们将刚刚函数读入的x，y，z对应填入这个函数，可以得到hanoi(A,,C,B,n-1); 文字有点不好描述，请看下面的动图演示：(还是以n=3进入n=2的数据作为例子)</p>
-<p><img src="https://img1.imgtp.com/2023/08/28/RUvp66U4.gif" alt="n=3进入n=2,n=2的视角"></p>
+<p><img src="https://pan.axianyu.cn/f/vbvI3/5df202a191f98469fa79080ff072b92a_MD5.gif" alt="n=3进入n=2,n=2的视角"></p>
 <p>所以我们从n=3的主视角看到的就是如下的运动情况：</p>
-<p><img src="https://img1.imgtp.com/2023/08/27/7RenKV1D.gif" alt="n=3的主视角运动情况"></p>
+<p><img src="https://pan.axianyu.cn/f/9gBi7/8b0abd59590d83cc55455b1e5fb45291_MD5.gif" alt="n=3的主视角运动情况"></p>
 <p><strong>看到没有！！主视角的黄色盘子第一步移动就去了C盘子，C盘子就对应了次视角的B盘子</strong></p>
 </blockquote>
 <hr>
