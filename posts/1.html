@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="图的简单理解, 浪浪猪">
+    <meta name="keywords" content="数据结构实验三, 浪浪猪">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>图的简单理解 | 浪浪猪</title>
+    <title>数据结构实验三 | 浪浪猪</title>
     <link rel="icon" type="image/png" href="/favicon1.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -250,12 +250,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/8.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/4.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">图的简单理解</h1>
+                    <h1 class="description center-align post-title">数据结构实验三</h1>
                 </div>
             </div>
         </div>
@@ -369,13 +369,9 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                    <div class="article-tag">
-                        
-                            <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">
-                                <span class="chip bg-color">数据结构</span>
-                            </a>
-                        
-                    </div>
+                          <div class="article-tag">
+                            <span class="chip bg-color">无标签</span>
+                          </div>
                     
                 </div>
                 <div class="col s5 right-align">
@@ -387,28 +383,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2023-08-20
+                    2023-10-26
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2023-10-21
+                    2023-10-26
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    922
+                    362
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    4 分
+                    1 分
                 </div>
                 
 
@@ -428,162 +424,260 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2><span id="tu">图</span><a href="#tu" class="header-anchor">#</a></h2><h3><span id="li-yong-shu-zu-gou-jian-tu">利用数组构建图</span><a href="#li-yong-shu-zu-gou-jian-tu" class="header-anchor">#</a></h3><h4><span id="wu-xiang-tu"><strong>无向图</strong></span><a href="#wu-xiang-tu" class="header-anchor">#</a></h4><pre class="line-numbers language-xml"><code class="language-xml">#include &lt;bits/stdc++.h>
-using  namespace  std;
-typedef char VertexType;
-typedef int EdgeType;
-#define MAXVER 100
-#define INFINITY 65532
-typedef struct
+                <h1><span id="ti-mu-yi">题目一</span><a href="#ti-mu-yi" class="header-anchor">#</a></h1><blockquote>
+<p><strong>实验内容</strong></p>
+<p>1、从键盘输入一整数的序列a1，a2,…an，编写算法实现：用顺序栈结构存储输入的整数序列，当ai不等于-1时，将ai入栈；当ai=-1时，输出栈顶整数并出栈。要求能应对入栈满等异常情况，并给出提示信息。</p>
+</blockquote>
+<h2><span id="da-an">答案</span><a href="#da-an" class="header-anchor">#</a></h2><pre class="line-numbers language-c++"><code class="language-c++">#include<iostream>
+using namespace std;
+#define n 5
+int sum = 0;
+int N, M;
+struct stack
 {
-    VertexType vexs[MAXVER];
-    EdgeType arc[MAXVER][MAXVER];
-    int numNodes,numEdges;
-}MGraph;
-void CreatMGraph(MGraph *G)
-{
-    int i,j,k,w;
-    cout&lt;&lt;"输入顶点数和边数:"&lt;<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>endl;</span>
-    <span class="token attr-name">cin</span><span class="token punctuation">></span></span>>G->numNodes>>G->numEdges;  //录入顶点和边数量的信息
-    cout&lt;&lt;"请输入顶点的具体的值"&lt;<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>endl;</span>
-    <span class="token attr-name">for(i</span><span class="token attr-value"><span class="token punctuation">=</span>0;i&lt;G-</span><span class="token punctuation">></span></span>numNodes;i++)
-    {  cin>>G->vexs[i];
+    int  a[n];
+    int t = -1;
+    void push(int element)
+    {
+        a[++t] = element;
     }
-    for(i=0;i<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>G-</span><span class="token punctuation">></span></span>numNodes;i++)
-    {  for(j=1;j<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>G-</span><span class="token punctuation">></span></span>numNodes;j++)
+    void pop()
+    {
+        --t;
+    }
+
+    int top()
+    {
+        return a[t];
+    }
+
+    bool empty()
+    {
+        return t == -1 ? 1 : 0;
+    }
+    int size()
+    {
+        if (t == -1)
+            return 0;
+
+        return t + 1;
+    }
+}Q;
+
+int main()
+{
+    for (int i = 0; i < 30; i++)
+    {
+        int x;
+        cin >> x;
+        if (x == -1)
         {
-           G->arc[i][j]=INFINITY;
-        }
-      }
-    for(k=0;k<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>G-</span><span class="token punctuation">></span></span>numNodes;k++)
-    {  cout&lt;&lt;"输入边(vi,vj)的下标i，j，以及权重w"&lt;<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>endl;</span>
-        <span class="token attr-name">cin</span><span class="token punctuation">></span></span>>i>>j>>w;
-        G->arc[i][j]=w;//输入权重值
-        G->arc[j][i]=w;
-    }//无向图的矩阵对称
-
-}
-
-int main()
-{    MGraph G1;//创建一个空的G1无向图变量
-     CreatMGraph(&amp;G1);//调用函数初始化G1
-}
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h3><span id="li-yong-lian-biao-lai-gou-zao-tu">利用链表来构造图</span><a href="#li-yong-lian-biao-lai-gou-zao-tu" class="header-anchor">#</a></h3><h4><span id="wu-xiang-tu"><strong>无向图</strong></span><a href="#wu-xiang-tu" class="header-anchor">#</a></h4><pre class="line-numbers language-xml"><code class="language-xml">#include &lt;bits/stdc++.h>
-using  namespace  std;
-typedef char VertexType;
-typedef int EdgeType;
-#define MAXVEX 100
-#define INFINITY 65532
-typedef struct EdgeNode
-{ int adjvex;存储当前结点的位置
-    EdgeType weight;存储权值
-    struct EdgeNode *Next; 存储下一个指向的结点
-}EdgeNode; 
-//构造出边表结点
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<blockquote>
-<p>代码具象化：<br><img src="https://img1.imgtp.com/2023/08/20/PblUz2Ru.jpg" alt="构造出边表结点图"></p>
-</blockquote>
-<pre class="line-numbers language-xml"><code class="language-xml">typedef struct VertexNode
-{
-    VertexType data;//存储顶点的数值
-    EdgeNode *firstedge;//存储顶点指向的下一个结点
-}VertexNode,AdjList[MAXVEX];//构造出顶点列表
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<blockquote>
-<p>代码具象化：<br><img src="https://img1.imgtp.com/2023/08/20/oNvo9jJN.jpg" alt="构造出顶点列表图"></p>
-</blockquote>
-<pre class="line-numbers language-xml"><code class="language-xml">typedef struct
-{
-    AdjList adjList;
-    int numNodes,numEdges;
-}GraphAdjlist;
-void CreatMGraph(GraphAdjlist *G)
-{
-    int i,j,k,w;
-    EdgeNode *e;//定义一个边表
-    cout&lt;&lt;"输入顶点数和边数:"&lt;<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>endl;</span>
-    <span class="token attr-name">cin</span><span class="token punctuation">></span></span>>G->numNodes>>G->numEdges;
-    for (int i=0; i<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>G-</span><span class="token punctuation">></span></span>numNodes ; ++i) {
-      cin>>G->adjList[i].data;//初始化顶点表的data数值
-      G->adjList[i].firstedge=NULL;//初始化顶点表的firstedge的数值
-    }
-    for(k=0;k<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>G-</span><span class="token punctuation">></span></span>numEdges;k++)//
-    {
-        cout&lt;<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>"输入边（vi，vj）上的顶点序号";</span>
-        <span class="token attr-name">cin</span><span class="token punctuation">></span></span>>i>>j;
-        e=(EdgeNode *)malloc(sizeof(EdgeNode));//申请边表类型的一个临时内存
-        e->adjvex=j;//把j输入到边表结点的adjvex上，表达当前j的位置
-        e->Next=G->adjList[i].firstedge;//采用头插法将位置为j的边表结点插入到头节点i对应的下一个结点。
-         G->adjList[i].firstedge=e;
-        
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<blockquote>
-<p>代码具象化：<br><img src="https://img1.imgtp.com/2023/08/20/XTAqW8FZ.jpg" alt="头插法"></p>
-</blockquote>
-<p><strong>因为是无向图，所以正反两面都要配置，上面是i-&gt;j的配置,下面的代码是j-&gt;i的配置</strong></p>
-<pre class="line-numbers language-xml"><code class="language-xml">        e=(EdgeNode *)malloc(sizeof(EdgeNode));
-        e->adjvex=i;
-        e->Next=G->adjList[j].firstedge;
-        G->adjList[j].firstedge=e;
+            if (Q.size() == 0)
+            {
+                cout << "栈为空，无法出栈" << endl;
             }
-        free(e);//释放申请malloc的动态内存
+            else
+            {
+                int temp;
+                temp = Q.top();
+                cout << temp;
+                Q.pop();
+            }
+
+        }
+        else if (Q.size() == n - 1)
+        {
+            cout << "栈满" << endl;
+  
+        }
+        if (x != -1)
+            Q.push(x);
+
+    }
+    return 0;
 }
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h5><span id="wan-zheng-dai-ma">完整代码</span><a href="#wan-zheng-dai-ma" class="header-anchor">#</a></h5><pre class="line-numbers language-xml"><code class="language-xml">#include &lt;bits/stdc++.h>
-using  namespace  std;
-typedef char VertexType;
-typedef int EdgeType;
-#define MAXVEX 100
-#define INFINITY 65532
-typedef struct EdgeNode
-{ int adjvex;存储当前结点的位置
-    EdgeType weight;存储权值
-    struct EdgeNode *Next; 存储下一个指向的结点
-}EdgeNode; 
-//构造出边表结点
-typedef struct VertexNode
-{
-    VertexType data;//存储顶点的数值
-    EdgeNode *firstedge;//存储顶点指向的下一个结点
-}VertexNode,AdjList[MAXVEX];//构造出顶点列表
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></iostream></code></pre>
+<h1><span id="ti-mu-san">题目三</span><a href="#ti-mu-san" class="header-anchor">#</a></h1><blockquote>
+<p>迷宫</p>
+</blockquote>
+<h2><span id="da-an">答案</span><a href="#da-an" class="header-anchor">#</a></h2><pre class="line-numbers language-c++"><code class="language-c++">#include <stdio.h>
+#include <stdlib.h>
+
+#define m 6    /* 迷宫的实际行数 */
+#define n 8    /* 迷宫的实际列数 */
+#define STACK_INIT_SIZE 100
+
 typedef struct
 {
-    AdjList adjList;
-    int numNodes,numEdges;
-}GraphAdjlist;
-void CreatMGraph(GraphAdjlist *G)
+    int x, y, d;   /* 横纵坐标及方向 */
+} SElemType;
+
+typedef struct
 {
-    int i,j,k,w;
-    EdgeNode *e;//定义一个边表
-    cout&lt;&lt;"输入顶点数和边数:"&lt;<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>endl;</span>
-    <span class="token attr-name">cin</span><span class="token punctuation">></span></span>>G->numNodes>>G->numEdges;
-    for (int i=0; i<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>G-</span><span class="token punctuation">></span></span>numNodes ; ++i) {
-      cin>>G->adjList[i].data;//初始化顶点表的data数值
-      G->adjList[i].firstedge=NULL;//初始化顶点表的firstedge的数值
-    }
-    for(k=0;k<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>G-</span><span class="token punctuation">></span></span>numEdges;k++)//
-    {
-        cout&lt;<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>"输入边（vi，vj）上的顶点序号";</span>
-        <span class="token attr-name">cin</span><span class="token punctuation">></span></span>>i>>j;
-        e=(EdgeNode *)malloc(sizeof(EdgeNode));//申请边表类型的一个临时内存
-        e->adjvex=j;//把j输入到边表结点的adjvex上，表达当前j的位置
-        e->Next=G->adjList[i].firstedge;//采用头插法将位置为j的边表结点插入到头节点i对应的下一个结点。
-          G->adjList[i].firstedge=e;
-        e=(EdgeNode *)malloc(sizeof(EdgeNode));
-        e->adjvex=i;
-        e->Next=G->adjList[j].firstedge;
-        G->adjList[j].firstedge=e;
-             }
-        free(e);//释放申请malloc的动态内存
-}
+    SElemType stack[STACK_INIT_SIZE];
+    int top;
+} SeqStack;
+
+typedef struct
+{
+    int x, y;
+} Item;
+
+SElemType XX = { -1, -1, -1 };
+
+int maze[m + 2][n + 2] =
+{
+    {1, 1, 1, 1, 1, 1, 1, 1, 1, 1},
+    {1, 0, 1, 1, 1, 0, 1, 1, 1, 1},
+    {1, 1, 0, 1, 0, 1, 1, 1, 1, 1},
+    {1, 0, 1, 0, 0, 0, 0, 0, 1, 1},
+    {1, 0, 1, 1, 1, 0, 1, 1, 1, 1},
+    {1, 1, 0, 0, 1, 1, 0, 0, 0, 1},
+    {1, 0, 1, 1, 0, 0, 1, 1, 0, 1},
+    {1, 1, 1, 1, 1, 1, 1, 1, 1, 1}
+};
+
+Item move[8] = { {0, 1}, {1, 1}, {1, 0}, {1, -1}, {0, -1}, {-1, -1}, {-1, 0}, {-1, 1} };
+
+void Init_SeqStack(SeqStack* S);
+
+int Empty_SeqStack(SeqStack* S);
+
+int Push_SeqStack(SeqStack* S, SElemType x);
+
+SElemType Gettop_SeqStack(SeqStack* S);
+
+SElemType Pop_SeqStack(SeqStack* S);
+
+int OnePath(int maze[m + 2][n + 2], Item move[8], SeqStack* S);
 
 int main()
-{GraphAdjlist *G1;
- CreatMGraph(G1);
+{
+    SElemType temp;
+    SeqStack* S;
+    S = (SeqStack*)malloc(sizeof(SeqStack));
+    if (!S)
+    {
+        printf("空间分配失败！");
+        exit(0);
+    }
+    Init_SeqStack(S);
+    OnePath(maze, move, S);
+    if (S->top == -1)
+    {
+        printf("此迷宫无路径\n");
+    }
+    else
+    {
+        printf("迷宫路径为:\n");
+        while (!Empty_SeqStack(S))
+        {
+            temp = Pop_SeqStack(S);
+            printf("(%d,%d)-", temp.x, temp.y);
+        }
+        while (getchar() != '0')
+        {
+            printf("请输入0，退出程序！");
+        }
+    }
+    return 0;
 }
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+void Init_SeqStack(SeqStack* S)
+{
+    S->top = -1;
+}
+
+int Empty_SeqStack(SeqStack* S)
+{
+    return S->top == -1;
+}
+
+int Push_SeqStack(SeqStack* S, SElemType x)
+{
+    if (S->top == STACK_INIT_SIZE - 1)
+    {
+        printf("栈已满，无法入栈\n");
+        return 0;
+    }
+    else
+    {
+        S->top++;
+        S->stack[S->top] = x;
+        return 1;
+    }
+}
+
+SElemType Gettop_SeqStack(SeqStack* S)
+{
+    if (Empty_SeqStack(S))
+    {
+        return XX;
+    }
+    else
+    {
+        return S->stack[S->top];
+    }
+}
+
+SElemType Pop_SeqStack(SeqStack* S)
+{
+    if (Empty_SeqStack(S))
+    {
+        printf("\n栈为空！");
+        exit(0);
+    }
+    else
+    {
+        S->top--;
+        return S->stack[S->top + 1];
+    }
+}
+
+int OnePath(int maze[m + 2][n + 2], Item move[8], SeqStack* S)
+{
+    int x, y, d, i, j, dd;
+    SElemType temp;
+    temp.x = 1;
+    temp.y = 1;
+    temp.d = -1;
+    Push_SeqStack(S, temp);
+    maze[temp.x][temp.y] = -1;
+    dd = 0;
+    while (!Empty_SeqStack(S))
+    {
+        temp = Gettop_SeqStack(S);
+        x = temp.x;
+        y = temp.y;
+        d = dd;
+        while (d < 8)
+        {
+            i = x + move[d].x;
+            j = y + move[d].y;
+            if (maze[i][j] == 0)
+            {
+                temp.x = i;
+                temp.y = j;
+                temp.d = d;
+                Push_SeqStack(S, temp);
+                dd = 0;
+                maze[i][j] = -1;
+                if (i == m && j == n)
+                    return 0;
+                break;
+            }
+            else
+                d = d + 1;
+        }
+        if (d == 8)
+        {
+            temp = Pop_SeqStack(S);
+            dd = temp.d + 1;
+        }
+    }
+    return 0;
+}
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></stdlib.h></stdio.h></code></pre>
 
                 
             </div>
@@ -610,7 +704,7 @@ int main()
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://langlangzhu.top/posts/52729.html">http://langlangzhu.top/posts/52729.html</a>
+                    <a href="http://langlangzhu.top/posts/1.html">http://langlangzhu.top/posts/1.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -647,11 +741,7 @@ int main()
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            
-                                <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">
-                                    <span class="chip bg-color">数据结构</span>
-                                </a>
-                            
+                            <span class="chip bg-color">无标签</span>
                         </div>
                     
                 </div>
@@ -819,70 +909,18 @@ int main()
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/posts/30495.html">
+                <a href="/posts/1.html">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="蓝桥杯2020年省赛填空题(七段码)">
+                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="数据结构实验三">
                         
-                        <span class="card-title">蓝桥杯2020年省赛填空题(七段码)</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            
-                        
-                    </div>
-                    <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2023-08-21
-                        </span>
-                        <span class="publish-author">
-                            
-                            <i class="fas fa-user fa-fw"></i>
-                            浪浪猪
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">
-                        <span class="chip bg-color">数据结构</span>
-                    </a>
-                    
-                    <a href="/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF/">
-                        <span class="chip bg-color">蓝桥杯</span>
-                    </a>
-                    
-                    <a href="/tags/%E5%9B%9E%E6%BA%AF%E7%AE%97%E6%B3%95/">
-                        <span class="chip bg-color">回溯算法</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
-            </div>
-            <div class="card">
-                <a href="/posts/4571.html">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="蓝桥杯2017年省赛填空题（统计出迷宫的人数）">
-                        
-                        <span class="card-title">蓝桥杯2017年省赛填空题（统计出迷宫的人数）</span>
+                        <span class="card-title">数据结构实验三</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -893,7 +931,7 @@ int main()
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2023-08-17
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-10-26
                             </span>
                         <span class="publish-author">
                             
@@ -903,17 +941,43 @@ int main()
                         </span>
                     </div>
                 </div>
+
                 
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/">
-                        <span class="chip bg-color">数据结构</span>
-                    </a>
-                    
-                    <a href="/tags/%E8%93%9D%E6%A1%A5%E6%9D%AF/">
-                        <span class="chip bg-color">蓝桥杯</span>
-                    </a>
-                    
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/posts/38391.html">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="上架视频">
+                        
+                        <span class="card-title">上架视频</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-10-21
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            浪浪猪
+                            
+                        </span>
+                    </div>
                 </div>
                 
             </div>
